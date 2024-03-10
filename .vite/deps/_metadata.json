@@ -1,0 +1,82 @@
+{
+  "hash": "da539fbd",
+  "configHash": "c1f15ab6",
+  "lockfileHash": "f239dc7c",
+  "browserHash": "77219017",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "08070986",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "c7821a7b",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "98c075f4",
+      "needsInterop": false
+    },
+    "@heroicons/react/24/solid": {
+      "src": "../../node_modules/@heroicons/react/24/solid/esm/index.js",
+      "file": "@heroicons_react_24_solid.js",
+      "fileHash": "fe5fbca8",
+      "needsInterop": false
+    },
+    "@mui/material/Box": {
+      "src": "../../node_modules/@mui/material/Box/index.js",
+      "file": "@mui_material_Box.js",
+      "fileHash": "35377ac7",
+      "needsInterop": false
+    },
+    "@mui/material/Grid": {
+      "src": "../../node_modules/@mui/material/Grid/index.js",
+      "file": "@mui_material_Grid.js",
+      "fileHash": "d9b0e953",
+      "needsInterop": false
+    },
+    "@mui/material/Container": {
+      "src": "../../node_modules/@mui/material/Container/index.js",
+      "file": "@mui_material_Container.js",
+      "fileHash": "c69fdb6e",
+      "needsInterop": false
+    },
+    "@mui/material/Typography": {
+      "src": "../../node_modules/@mui/material/Typography/index.js",
+      "file": "@mui_material_Typography.js",
+      "fileHash": "c008bf65",
+      "needsInterop": false
+    },
+    "react-slick": {
+      "src": "../../node_modules/react-slick/lib/index.js",
+      "file": "react-slick.js",
+      "fileHash": "62e2ff1c",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-KJUJBIHA": {
+      "file": "chunk-KJUJBIHA.js"
+    },
+    "chunk-7ELLPP6X": {
+      "file": "chunk-7ELLPP6X.js"
+    },
+    "chunk-Q6CYVTMW": {
+      "file": "chunk-Q6CYVTMW.js"
+    },
+    "chunk-US5FYM46": {
+      "file": "chunk-US5FYM46.js"
+    },
+    "chunk-4RIAT3BI": {
+      "file": "chunk-4RIAT3BI.js"
+    },
+    "chunk-W4VDMLRG": {
+      "file": "chunk-W4VDMLRG.js"
+    }
+  }
+}

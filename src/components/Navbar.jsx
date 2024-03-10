@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 import { navlinks } from '../utils/Data'
 import logo from '../assets/logo-white-V2-87x76.png'
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
@@ -23,7 +24,7 @@ const Navbar = () => {
                     {
                         navlinks.map((link) => (
                             <li className='md:ml-8 md:my-0 my-7 uppercase gap-4' key={link.id}>
-                                <a href={link.link} className='font-Poppins text-lg text-gray-800 hover:text-Teal duration-500'>{link.name}</a>
+                                <Link to={link.link} className='font-Poppins text-lg text-gray-800 hover:text-Teal duration-500'>{link.name}</Link>
                             </li>))
                     }
                 </ul>
