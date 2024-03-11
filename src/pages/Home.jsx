@@ -178,12 +178,12 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className='bg-Teal flex justify-center items-center'>
-                <div className='px-[50px] py-[50px]'>
+            <div className='bg-Teal flex justify-center items-center mt-20'>
+                <div className='py-[50px]'>
                     <Typography variant='h2' sx={{fontFamily: 'Poppins', fontSize: '32px', padding: '20px'}}>Achieve Your Fitness Goals</Typography>
                     <Typography variant='h2' sx={{fontFamily: 'Poppins', fontSize: '18px', padding: '20px'}}>Flexible membership packages to suit all levels of training to help achieve your fitness goals</Typography>
                 </div>
-                <div className='px-[50px] py-[50px] m-auto'>
+                <div className='py-[50px] m-auto'>
                     <button className='border-2 p-4 text-xl font-semibold bg-primary'>Join Us</button>
                 </div>
             </div>
