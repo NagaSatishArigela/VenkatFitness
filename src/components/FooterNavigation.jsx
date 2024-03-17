@@ -49,7 +49,7 @@ const NavigationItem = ({ label, path }) => {
 
 const FooterNavigation= () => {
   return (
-    <Grid spacing={2}>
+    <Grid spacing={2} className='flex lg:justify-center'>
       <Grid item>
       <Box
       sx={{

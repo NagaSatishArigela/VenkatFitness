@@ -86,7 +86,7 @@ const Home = () => {
                 <h4 className='text-4xl font-Poppins font-bold uppercase m-auto pb-20'>Services</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Box 1 */}
-                    {servicesData.map((service) => <div className="bg-Teal rounded-t-full p-6 h-fit" key={service.id}>
+                    {servicesData.map((service) => <div className="bg-Teal rounded-t-full p-6 h-auto" key={service.id}>
                         <img src={service.url} alt="Service 1" className="max-w-[95%] m-auto" />
                         <h5 className="text-white text-center text-2xl py-2 font-Poppins font-semibold mb-2">{service.title}</h5>
                         <div className='py-12 flex justify-center'>
@@ -178,8 +178,8 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className='bg-Teal flex justify-center items-center mt-20'>
-                <div className='py-[50px]'>
+            <div className='bg-Teal flex justify-center items-center mt-20 border-b-2'>
+                <div className='py-[50px] m-auto'>
                     <Typography variant='h2' sx={{fontFamily: 'Poppins', fontSize: '32px', padding: '20px'}}>Achieve Your Fitness Goals</Typography>
                     <Typography variant='h2' sx={{fontFamily: 'Poppins', fontSize: '18px', padding: '20px'}}>Flexible membership packages to suit all levels of training to help achieve your fitness goals</Typography>
                 </div>
