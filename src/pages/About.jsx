@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from '../assets/fitness-trainer-scaled-1-2048x1151.jpg'; // Import your banner image here
+import bannerImage from '../assets/fitness-trainer-scaled-1-2048x1151.jpg';
 
 const About = () => {
     return (
