@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import About from './pages/About';
 import Transformations from './pages/Transformations';
 import ContactUs from './pages/ContactUs';
+import Training from './pages/Training';
 
 function App() {
   return (
@@ -21,10 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/transformations" element={<Transformations />} />
           <Route path="/contact" element={<ContactUs />} />
-          {/* <Route path="/training" element={<Trainings />} />
-          <Route path="/transformation" element={<Transformation />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contactUs" element={<ContactUs />} /> */}
+          <Route path="/training" element={<Training />} />
         </Routes>
         <Footer />
       </div>
