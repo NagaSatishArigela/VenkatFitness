@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import SocialLinks from './FooterSocialLinks'
-import logo from '../assets/cropped-cropped-Venkat-sir-yellow-glow-logo-003-1.webp'
+import logo from '../assets/Venkat-fitness-trainer.png'
 import map from '../assets/map.svg'
 import FooterNavigation from './FooterNavigation'
 // import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
@@ -16,11 +16,11 @@ const Footer = () => {
         <Grid container spacing={1} className='lg:px-20 md:px-12 sm: px-8 border-t-2 py-2'>
           <Grid item xs={12} md={6} lg={3}>
             <Box sx={{ width: '100% ' }}>
-              <div className='flex items-center p-2'>
-                <img src={logo} alt='Venket Fitness' style={{ height: '90px' }} />
-                <Typography className='text-justify' sx={{ letterSpacing: 1, mb: 2, fontSize: '30px', fontWeight: 600, fontFamily: 'Poppins, sans-serif' }}>
+              <div className='flex items-center'>
+                <img src={logo} alt='Venket Fitness' style={{ height: '120px' }} />
+                {/* <Typography className='text-justify' sx={{ letterSpacing: 1, mb: 2, fontSize: '30px', fontWeight: 600, fontFamily: 'Poppins, sans-serif' }}>
                   Venket Fitness
-                </Typography>
+                </Typography> */}
               </div>
               <Typography variant="subtitle2" sx={{ letterSpacing: 1, mb: 2, fontFamily: 'Poppins, sans-serif' }}>
                 Online Personal Trainer & Fitness Consultant in India

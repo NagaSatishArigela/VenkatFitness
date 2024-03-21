@@ -5,6 +5,8 @@ import facebook from '../assets/facebook.svg'
 import icon1 from '../assets/twitter.svg'
 import icon2 from '../assets/instagram.svg'
 import icon3 from '../assets/youtube.svg'
+import icon4 from '../assets/linkedin-161-svgrepo-com.svg'
+import icon5 from '../assets/spotify-svgrepo-com.svg'
 
 export const socialLinks = [
     {
@@ -26,6 +28,16 @@ export const socialLinks = [
         name: 'Twitter',
         link: '#',
         icon: icon1,
+    },
+    {
+        name: 'Linkedln',
+        link: '#',
+        icon: icon4,
+    },
+    {
+        name: 'Spotify',
+        link: '#',
+        icon: icon5,
     },
 ]
 

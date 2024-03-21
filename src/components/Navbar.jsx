@@ -6,6 +6,9 @@ import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+    const handleMenuItemClick = () => {
+        setOpen(false); // Close the menu when a menu item is clicked
+    };
     return (
         <div className='shadow-md w-full fixed top-0 left-0 z-50'>
             <div className='md:flex items-center justify-between bg-primary py-4 md:px-10 px-7'>
@@ -24,7 +27,7 @@ const Navbar = () => {
                     {
                         navlinks.map((link) => (
                             <li className='md:ml-8 md:my-0 my-7 uppercase gap-4' key={link.id}>
-                                <Link to={link.link} className='font-Poppins text-lg text-gray-800 hover:text-Teal duration-500'>{link.name}</Link>
+                                <Link to={link.link} className='font-Poppins text-lg text-gray-800 hover:text-Teal duration-500' onClick={handleMenuItemClick}>{link.name}</Link>
                             </li>))
                     }
                 </ul>
