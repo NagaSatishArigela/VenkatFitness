@@ -14,9 +14,9 @@ const ContactUs = () => {
 
     return (
         <div>
-            <div className="visme_d" data-title="Contact Form" data-url="jwo0nmkq-contact-form" data-domain="forms" data-full-page="false" data-min-height="800px" data-form-id="47333"></div>
+            <div className="visme_d" data-title="venketfitness" data-url="pvmkr6dv-venket-fitness" data-domain="forms" data-full-page="false" data-min-height="800px" data-form-id="47333"></div>
         </div>
     );
 };
-
+ 
 export default ContactUs;
