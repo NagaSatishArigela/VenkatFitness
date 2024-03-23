@@ -28,6 +28,7 @@ const Transformations = () => {
                 index={index}
                 slides={slides}
                 open={index >= 0}
+               // className="lightbox-container"
                 close={() => setIndex(-1)}
             />
             </div>

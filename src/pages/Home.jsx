@@ -81,7 +81,7 @@ const Home = () => {
                 <img src={mobileBanner} alt='Venkat Trainer' className='w-full lg:hidden' />
             </div>
             <div className='flex m-8'>
-                <h1 className="sm:text-5xl font-extrabold font-Poppins lg:p-8 p-2 m-auto" style={{fontWeight: 'bolder'}}>Venkat Fitness – Certified Celebrity Fitness Trainer</h1>
+                <h1 className="sm:text-5xl font-extrabold font-Poppins lg:p-8 p-2 m-auto" style={{ fontWeight: 'bolder' }}>Venkat Fitness – Certified Celebrity Fitness Trainer</h1>
             </div>
             <div className='flex flex-col items-center px-2'>
                 <h4 className='text-4xl font-Poppins font-bold uppercase m-auto pb-20'>Services</h4>
@@ -138,7 +138,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="bg-gray-100 py-20">
-                <div className="container mx-auto text-center">
+                <div className="container px-4 mx-auto text-center">
                     <h2 className="text-5xl font-bold mb-12">Reviews</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {videoTestimonals.map((video) => (
@@ -181,11 +181,11 @@ const Home = () => {
             </div>
             <div className='bg-Teal flex flex-col md:flex-row justify-center items-center mt-20 border-b-2'>
                 <div className='lg:py-[50px] py-[10px] m-auto'>
-                    <Typography variant='h2' sx={{fontFamily: 'Poppins', fontSize: '32px', padding: '20px'}}>Achieve Your Fitness Goals</Typography>
-                    <Typography variant='h2' sx={{fontFamily: 'Poppins', fontSize: '18px', padding: '20px'}}>Flexible membership packages to suit all levels of training to help achieve your fitness goals</Typography>
+                    <Typography variant='h2' sx={{ fontFamily: 'Poppins', fontSize: '32px', padding: '20px' }}>Achieve Your Fitness Goals</Typography>
+                    <Typography variant='h2' sx={{ fontFamily: 'Poppins', fontSize: '18px', padding: '20px' }}>Flexible membership packages to suit all levels of training to help achieve your fitness goals</Typography>
                 </div>
                 <div className='lg:py-[50px] py-[10px] m-auto'>
-                <Link to='/contact'><button className='border-2 p-4 text-xl font-semibold bg-primary'>Join Us</button></Link>
+                    <Link to='/contact'><button className='border-2 p-4 text-xl font-semibold bg-primary'>Join Us</button></Link>
                 </div>
             </div>
         </div>

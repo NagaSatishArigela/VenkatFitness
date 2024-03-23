@@ -16,27 +16,27 @@ export const socialLinks = [
     },
     {
         name: 'Instagram',
-        link: '#',
+        link: 'https://www.instagram.com/venkat.madamala/',
         icon: icon2,
     },
     {
         name: 'YouTube',
-        link: '#',
+        link: 'https://www.youtube.com/channel/UCMS6jAdlfsDW2l6yGYtd18A',
         icon: icon3,
     },
     {
         name: 'Twitter',
-        link: '#',
+        link: 'https://twitter.com/i/flow/login?redirect_after_login=%2FVenkatFitness',
         icon: icon1,
     },
-    {
-        name: 'Linkedln',
-        link: '#',
-        icon: icon4,
-    },
+    // {
+    //     name: 'Linkedln',
+    //     link: '',
+    //     icon: icon4,
+    // },
     {
         name: 'Spotify',
-        link: '#',
+        link: 'https://open.spotify.com/show/2GdBnPZtqZJbvBjlwCP0eV',
         icon: icon5,
     },
 ]
@@ -62,7 +62,7 @@ const SocialLinkItem = ({ item }) => (
                 borderRadius: '50%',
                 color: 'inherit',
                 '&:hover': {
-                    backgroundColor: 'secondary.main',
+                    backgroundColor: '#04879C',
                 },
                 '& img': {
                     fill: 'currentColor',

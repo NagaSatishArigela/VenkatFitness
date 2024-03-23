@@ -9,3 +9,7 @@ body {
   background-color: #090030;
   color: #ffffff;
 }
+
+.lightbox-container {
+  height: 200px;
+}

@@ -7,6 +7,7 @@ import SocialLinks from './FooterSocialLinks'
 import logo from '../assets/Venkat-fitness-trainer.png'
 import map from '../assets/map.svg'
 import FooterNavigation from './FooterNavigation'
+import { Link } from 'react-router-dom'
 // import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
 const Footer = () => {
@@ -17,7 +18,7 @@ const Footer = () => {
           <Grid item xs={12} md={6} lg={3}>
             <Box sx={{ width: '100% ' }}>
               <div className='flex items-center'>
-                <img src={logo} alt='Venket Fitness' style={{ height: '120px' }} />
+                <Link to='/'><img src={logo} alt='Venket Fitness' style={{ height: '120px' }} /></Link>
                 {/* <Typography className='text-justify' sx={{ letterSpacing: 1, mb: 2, fontSize: '30px', fontWeight: 600, fontFamily: 'Poppins, sans-serif' }}>
                   Venket Fitness
                 </Typography> */}
@@ -43,13 +44,13 @@ const Footer = () => {
               <Typography className='text-justify' sx={{ mb: 2, fontSize: '14px', fontFamily: 'Poppins, sans-serif' }}>
                 8-2-293/82/J/A/52, Journalist Co-op Housing Society, Jubilee Hills, Hyderabad, Telangana 500082.
               </Typography>
-              <Typography sx={{ mb: 2, fontSize: '18px', color: '#2F6C6D', fontWeight: 600, fontFamily: 'Poppins, sans-serif' }}>
+              <Typography sx={{ mb: 2, fontSize: '18px', color: '#04879C', fontWeight: 600, fontFamily: 'Poppins, sans-serif' }}>
                 Weekdays Monday - Friday
               </Typography>
               <Typography variant="subtitle2" sx={{ mb: 2, fontFamily: 'Poppins, sans-serif', color: 'gray' }}>
                 05:00 - 19:00
               </Typography>
-              <Typography sx={{ mb: 2, fontSize: '18px', color: '#2F6C6D', fontWeight: 600, fontFamily: 'Poppins, sans-serif' }}>
+              <Typography sx={{ mb: 2, fontSize: '18px', color: '#04879C', fontWeight: 600, fontFamily: 'Poppins, sans-serif' }}>
                 Weekends Saturday - Sunday
               </Typography>
               <Typography variant="subtitle1" sx={{ mb: 2, fontFamily: 'Poppins, sans-serif', color: 'gray' }}>
