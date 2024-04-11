@@ -7,6 +7,23 @@ import seminar from "../assets/venkatfitnesscorporatetraining-.webp";
 import online from "../assets/online-consultation.webp";
 import setup from "../assets/venkatgymconsulting.webp";
 import Srikanth from "../assets/srikanth.webp";
+import ram from "../assets/ram.webp";
+import tanish from "../assets/tanish.webp";
+import tarun from "../assets/tarun.webp";
+import sunil1 from "../assets/sunil1.webp";
+import sunil2 from "../assets/sunil2.webp";
+import prince from "../assets/prince.webp";
+import fitness1 from "../assets/fitness1.webp";
+import fitness2 from "../assets/fitness2.webp";
+import fitness3 from "../assets/fitness3.webp";
+import fitness4 from "../assets/fitness4.webp";
+import fitness5 from "../assets/fitness5.webp";
+import coach from "../assets/Online Coach.jpeg";
+import onlinePersonal from "../assets/Online Personal Trainer India.jpg";
+import onlinePersonal2 from "../assets/Online Personal Training.jpeg";
+import onlinePersonal3 from "../assets/Online Virtual Personal Wellness and Fitness Training.jpg";
+import onlinePersonal4 from "../assets/Top-Online-fitness-trainer-in-india.jpg";
+import onlinePersonal5 from "../assets/Transformation Trainer.jpeg";
 
 export const navlinks = [
   {
@@ -16,7 +33,7 @@ export const navlinks = [
   },
   {
     id: 2,
-    link: "/training",
+    link: "/online-training",
     name: "Online Trianing",
   },
   {
@@ -26,7 +43,7 @@ export const navlinks = [
   },
   {
     id: 4,
-    link: "/about",
+    link: "/about-me",
     name: "About Me",
   },
   {
@@ -121,48 +138,23 @@ export const servicesData = [
 const breakpoints = [4320, 2160, 1080, 640, 384, 256, 128];
 const unsplashLink = (id, width, height) =>
   `https://source.unsplash.com/${id}/${width}x${height}`;
-export const tranformationImages = [
-  // {
-  //   src: image1,
-  //   width: 320,
-  //   height: 174,
-  // },
-  {
-    src: Srikanth,
-    width: 140,
-    height: 174,
-  },
-  {
-    src: image2,
-    width: 1080,
-    height: 1426,
-  },
-  {
-    src: image3,
-    width: 1080,
-    height: 1440,
-  },
-  {
-    src: image4,
-    width: 1080,
-    height: 716,
-  },
+export const Images = [
+  Srikanth,
+  ram,
+  tanish,
+  tarun,
+  sunil1,
+  sunil2,
+  prince,
+  fitness1,
+  fitness2,
+  fitness3,
+  fitness4,
+  fitness5,
+  coach,
+  onlinePersonal,
+  onlinePersonal2,
+  onlinePersonal3,
+  onlinePersonal4,
+  onlinePersonal5
 ];
-
-export const slides = tranformationImages.map((photo) => {
-  const width = photo.width * 4;
-  const height = photo.height * 4;
-  return {
-    src: photo.src,
-    width,
-    height,
-    srcSet: breakpoints.map((breakpoint) => {
-      const breakpointHeight = Math.round((height / width) * breakpoint);
-      return {
-        src: photo.src,
-        width: breakpoint,
-        height: breakpointHeight,
-      };
-    }),
-  };
-});

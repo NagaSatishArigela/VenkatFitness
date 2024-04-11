@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import { navlinks } from '../utils/Data'
-import logo from '../assets/logo-white-V2-87x76.png'
+import logo from '../assets/Venkat-fitness-trainer.png'
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const handleMenuItemClick = () => {
         setOpen(false); // Close the menu when a menu item is clicked
+        window.scrollTo(0, 0);
     };
     return (
         <div className='shadow-md w-full fixed top-0 left-0 z-50'>
