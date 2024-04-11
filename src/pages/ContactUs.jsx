@@ -40,27 +40,27 @@ const ContactUs = () => {
         <form className="max-w-md" ref={form} onSubmit={sendEmail}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700">Your Name:</label>
-            <input type="text" id="name" name="from_name" className="form-input mt-1 w-full h-10" required />
+            <input type="text" id="name" name="from_name" className="form-input mt-1 w-full h-10 px-3" required />
           </div>
 
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700">Your Email:</label>
-            <input type="email" id="email" name="email" className="form-input mt-1 w-full h-10" required />
+            <input type="email" id="email" name="email" className="form-input mt-1 w-full h-10 px-3 text-black" required />
           </div>
  
           <div className="mb-4">
             <label htmlFor="phone" className="block text-gray-700">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" className="form-input mt-1 w-full h-10" required />
+            <input type="tel" id="phone" name="phone" className="form-input mt-1 w-full h-10 px-3 text-black" required />
           </div>
 
           <div className="mb-4 relative">
             <label htmlFor="package" className="block text-gray-700">Please select Package below:</label>
-            <select id="package" name="package" className="form-select mt-1 w-full h-10 appearance-none border rounded px-3 py-2 bg-white text-gray-700" required>
+            <select id="package" name="package" className="form-select mt-1 w-full h-10 appearance-none border rounded px-3 py-2 text-black bg-gray-100" required>
               <option value="" disabled selected>Select Package</option>
-              <option value="couple">Couple Plan</option>
-              <option value="individual">Individual Plan</option>
-              <option value="family">Family Plan</option>
-              <option value="custom">Custom Plan</option>
+              <option value="couple" className='text-black'>Couple Plan</option>
+              <option value="individual" className='text-black'>Individual Plan</option>
+              <option value="family" className='text-black'>Family Plan</option>
+              <option value="custom" className='text-black'>Custom Plan</option>
               {/* Add options for packages here */}
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -71,16 +71,16 @@ const ContactUs = () => {
 
           <div className="mb-4">
             <label htmlFor="duration" className="block text-gray-700">Duration:</label>
-            <select id="duration" name="duration" className="form-select mt-1 w-full h-10" required>
+            <select id="duration" name="duration" className="form-select mt-1 w-full h-10 px-3 text-black" required>
               <option value="">Select Duration</option>
-              <option value="family">Family Plan</option>
-              <option value="custom">Custom Plan</option>
+              <option value="family" className='text-black'>Family Plan</option>
+              <option value="custom" className='text-black'>Custom Plan</option>
             </select>
           </div>
 
           <div className="mb-4">
             <label htmlFor="location" className="block text-gray-700">Location, Height & Weight:</label>
-            <textarea id="location" name="location" className="form-textarea mt-1 w-full" required></textarea>
+            <textarea id="location" name="location" className="form-textarea mt-1 w-full text-black px-3" required></textarea>
           </div>
 
           <div className="mb-4">
