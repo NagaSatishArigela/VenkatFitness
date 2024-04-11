@@ -29,7 +29,7 @@ const ContactUs = () => {
       );
   };
   const handleClose = () => {
-    setSend({ send: false });
+    setSend( false );
 };
   return (
     <div className="container mx-auto p-4 lg:flex lg:justify-center">
