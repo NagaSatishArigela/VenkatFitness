@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 const Training = () => {
     const [activeTab, setActiveTab] = useState(0);
     const [activeAccordion, setActiveAccordion] = useState(null);
+    const [showMore, setShowMore] = useState(false);
 
     const tabContents = [
         {
@@ -58,6 +59,9 @@ const Training = () => {
             ]
         }
     ];
+  const handleToggleShowMore = () => {
+    setShowMore(!showMore);
+  };
     return (
         <div className="mt-24 bg-gray-100 py-8">
             {/* First Section */}
@@ -73,27 +77,35 @@ const Training = () => {
                         <div className='py-4'>
                             <Typography variant="h6" style={{ marginBottom: '8px', textAlign: 'center' }}>Online Personal Trainer & Fitness Consultant in India</Typography>
                             <Typography variant="body1" className="mb-4" style={{ marginBottom: '8px', textAlign: 'center' }}>Venkat Fitness is a personal fitness trainer and consultant in India. Venkat Madamala is a certified online personal trainer with 15 years of rich experience in fitness. If you cannot hire a good fitness guide, I am here to help you achieve your fitness goals with all the convenience of time and training in your own home, gym, or other personal space.</Typography>
+                            {showMore && (
+                                <>
+                                    <Typography variant="body1" style={{ marginBottom: '8px', textAlign: 'center' }}>Online personal training program will be customised according to the information based on your daily routine, medical history, diet and personal fitness goals. After thorough analysis of your requirement I shall come up with a diet and a fitness plan. With online fitness program I will be providing you diet tips, fitness consultation and motivation to help you get the desired body.</Typography>
+                                    <Typography variant="body1" className="mb-4" style={{ marginBottom: '8px', textAlign: 'center' }}>More specifically, you’ll be learning from someone who has rich experience and high academic/fitness qualification.</Typography>
+                                </>
+                            )}
                         </div>
-                        <div className='py-4'><button variant="contained" className="py-2 px-2 bg-Teal">READ MORE</button></div>
+                        <div className='py-4'><button variant="contained" className="py-2 px-2 bg-Teal" onClick={handleToggleShowMore}>{showMore ? 'READ LESS' : 'READ MORE'}</button></div>
                     </Box>
                 </Grid>
             </Grid>
             <Box className="second-section mt-8">
                 <div className="hidden md:block">
                     <div className="p-8">
-                        <ul className="grid grid-flow-col text-center text-gray-500 font-Poppins">
+                        <ul className="grid grid-flow-col text-center text-gray-500 font-Poppins p-0 m-0">
                             {tabContents.map((tab, index) => (
-                                <li key={index}>
-                                    <a className={`flex justify-center py-4 ${activeTab === index ? 'bg-primary border-l border-t border-r border-gray-100' : ''}`} onClick={() => setActiveTab(index)}>
+                                <li key={index} className="list-none">
+                                    <a className={`flex justify-center py-3 px-3 ${activeTab === index ? 'bg-primary border-l border-t border-r border-gray-100' : ''}`} onClick={() => setActiveTab(index)}>
                                         {tab.title}
                                     </a>
                                 </li>
                             ))}
                         </ul>
                         <div className="bg-primary shadow border border-gray-100 p-8 text-gray-700 rounded-lg -mt-2">
-                            {tabContents[activeTab].content.map((item, index) => (
-                                <p key={index}>{item}</p>
-                            ))}
+                            <div className="p-8">
+                                {tabContents[activeTab].content.map((item, index) => (
+                                    <p key={index}>{item}</p>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

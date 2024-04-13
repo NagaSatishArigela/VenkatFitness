@@ -12,7 +12,7 @@ const courseMenu = [
   },
   {
     label: 'Online Training',
-    path: '/training',
+    path: '/online-training',
   },
   {
     label: 'Transformations',
@@ -20,16 +20,22 @@ const courseMenu = [
   },
   {
     label: 'About me',
-    path: '/about',
+    path: '/about-me',
   },
   {
     label: 'Contact Us',
-    path: 'navlinks',
+    path: 'contact-us',
   },
 ]
 
 
 const NavigationItem = ({ label, path }) => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
       <MuiLink
       component={Link}
@@ -41,6 +47,7 @@ const NavigationItem = ({ label, path }) => {
           color: 'primary.contrastText',
           fontFamily: 'Poppins, sans-serif'
         }}
+        onClick={scrollToTop}
       >
         {<KeyboardArrowRight className='text-Teal text-xl'/>}{label}
       </MuiLink>

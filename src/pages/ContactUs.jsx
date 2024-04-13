@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import ContactPic from "../assets/contactPic.webp";
+import ContactPic from "../assets/contact-Fitness-Traier-in-India.jpeg";
 import emailjs from "@emailjs/browser";
 import ThankyouModal from '../components/ThankyouModal';
 
@@ -29,8 +29,8 @@ const ContactUs = () => {
       );
   };
   const handleClose = () => {
-    setSend( false );
-};
+    setSend(false);
+  };
   return (
     <div className="container mx-auto p-4 lg:flex lg:justify-center">
       <div className="lg:w-1/2 lg:mr-6">
@@ -40,14 +40,14 @@ const ContactUs = () => {
         <form className="max-w-md" ref={form} onSubmit={sendEmail}>
           <div className="mb-4">
             <label htmlFor="name" className="block text-gray-700">Your Name:</label>
-            <input type="text" id="name" name="from_name" className="form-input mt-1 w-full h-10 px-3" required />
+            <input type="text" id="name" name="from_name" className="form-input mt-1 w-full h-10 px-3 text-black" required />
           </div>
 
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700">Your Email:</label>
             <input type="email" id="email" name="email" className="form-input mt-1 w-full h-10 px-3 text-black" required />
           </div>
- 
+
           <div className="mb-4">
             <label htmlFor="phone" className="block text-gray-700">Phone Number:</label>
             <input type="tel" id="phone" name="phone" className="form-input mt-1 w-full h-10 px-3 text-black" required />
@@ -56,12 +56,12 @@ const ContactUs = () => {
           <div className="mb-4 relative">
             <label htmlFor="package" className="block text-gray-700">Please select Package below:</label>
             <select id="package" name="package" className="form-select mt-1 w-full h-10 appearance-none border rounded px-3 py-2 text-black bg-gray-100" required>
-              <option value="" disabled selected>Select Package</option>
-              <option value="couple" className='text-black'>Couple Plan</option>
-              <option value="individual" className='text-black'>Individual Plan</option>
-              <option value="family" className='text-black'>Family Plan</option>
-              <option value="custom" className='text-black'>Custom Plan</option>
-              {/* Add options for packages here */}
+              <option value="" disabled selected>--Please select an option--</option>
+              <option value="couple" className='text-black'>Personalised Nutrition Plan - (Diet Plan)</option>
+              <option value="individual" className='text-black'>Personalised Workout + Nutrition Plan</option>
+              <option value="family" className='text-black'>Sixpack Transformation Workout + Supplement Guidance</option>
+              <option value="custom" className='text-black'>Couple Plan</option>
+              <option value="custom" className='text-black'>Premium Customised Plan</option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.707a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L10 10.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4z" /></svg>
@@ -72,9 +72,11 @@ const ContactUs = () => {
           <div className="mb-4">
             <label htmlFor="duration" className="block text-gray-700">Duration:</label>
             <select id="duration" name="duration" className="form-select mt-1 w-full h-10 px-3 text-black" required>
-              <option value="">Select Duration</option>
-              <option value="family" className='text-black'>Family Plan</option>
-              <option value="custom" className='text-black'>Custom Plan</option>
+              <option value="" disabled selected>--Please select an option--</option>
+              <option value="family" className='text-black'>1 Month</option>
+              <option value="custom" className='text-black'>3 Months</option>
+              <option value="family" className='text-black'>6 Months</option>
+              <option value="custom" className='text-black'>1 Year</option>
             </select>
           </div>
 
@@ -88,11 +90,11 @@ const ContactUs = () => {
           </div>
 
           <div className="text-center">
-            <button type="submit" className="px-4 py-2 bg-black text-white rounded hover:bg-blue-600">Submit</button>
+            <button type="submit" className="px-4 py-2 bg-white text-black rounded">Submit</button>
           </div>
         </form>
       </div>
-      {send && <ThankyouModal open={send} handleClose={handleClose}/>}
+      {send && <ThankyouModal open={send} handleClose={handleClose} />}
     </div>
   );
 };
