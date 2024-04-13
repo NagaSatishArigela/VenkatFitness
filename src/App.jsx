@@ -10,6 +10,7 @@ import About from './pages/About';
 import Transformations from './pages/Transformations';
 import ContactUs from './pages/ContactUs';
 import Training from './pages/Training';
+import ThankYou from './components/ThankYou';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/transformations" element={<Transformations />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/online-training" element={<Training />} />
+          <Route path="/thank-you" element={<ThankYou/>}/>
         </Routes>
         <Footer />
       </div>

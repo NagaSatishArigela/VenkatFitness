@@ -79,7 +79,7 @@ const Footer = () => {
             </Box>
           </Grid>
         </Grid>
-        <Typography className='text-center border-t-2 pt-2 pb-2'>© Copyright 2012 - 2024 | All Rights Reserved | Designed and Maintained SKYHIT MEDIA</Typography>
+        <Typography className='text-center border-t-2 pt-2 pb-2'>© Copyright 2012 - 2024 | All Rights Reserved | Designed and Maintained by <Link to="https://skyhitmedia.com/" target="blank" className='text-Teal'>SKYHIT MEDIA</Link></Typography>
       </Box>
     </>
   )

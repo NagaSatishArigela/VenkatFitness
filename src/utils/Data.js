@@ -24,6 +24,24 @@ import onlinePersonal2 from "../assets/Online Personal Training.jpeg";
 import onlinePersonal3 from "../assets/Online Virtual Personal Wellness and Fitness Training.jpg";
 import onlinePersonal4 from "../assets/Top-Online-fitness-trainer-in-india.jpg";
 import onlinePersonal5 from "../assets/Transformation Trainer.jpeg";
+import onlinePersonal6 from "../assets/Best Online Fitness Training in Indi.jpg";
+import onlinePersonal7 from "../assets/bestpweight-loss-coach-online.jpg";
+import onlinePersonal8 from "../assets/India's Best Online Fitness Trainer.jpeg";
+import f2 from "../assets/2.webp";
+import f3 from "../assets/3.webp";
+import f4 from "../assets/4.webp";
+import f5 from "../assets/5.webp";
+import f6 from "../assets/6.webp";
+import f7 from "../assets/7.webp";
+import f8 from "../assets/8.webp";
+import f9 from "../assets/9.webp";
+import f10 from "../assets/10.webp";
+import f11 from "../assets/11.webp";
+import f12 from "../assets/12.webp";
+import f13 from "../assets/13.webp";
+import f14 from "../assets/14.webp";
+import f15 from "../assets/15.webp";
+import f16 from "../assets/16.webp";
 
 export const navlinks = [
   {
@@ -151,10 +169,14 @@ export const Images = [
   fitness3,
   fitness4,
   fitness5,
+  f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13,f14,f15,f16,
   coach,
   onlinePersonal,
   onlinePersonal2,
   onlinePersonal3,
   onlinePersonal4,
-  onlinePersonal5
+  onlinePersonal5,
+  onlinePersonal6,
+  onlinePersonal7,
+  onlinePersonal8,
 ];

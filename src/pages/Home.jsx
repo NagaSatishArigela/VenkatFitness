@@ -12,6 +12,7 @@ import profile from '../assets/profile.svg'
 import list from '../assets/list.svg'
 import people from '../assets/people.svg'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
 
@@ -75,6 +76,37 @@ const Home = () => {
     }
 
     return (
+        <>
+        <Helmet>
+        <meta
+          name="title"
+          content="Venkat Fitness Trainer - Best Fitness Trainer in Hyderabad - India"
+        />
+        <meta
+          name="description"
+          content="Venkat Fitness Trainer is the Best Fitness Trainer in Hyderabad having 15+ Years experience in the field of fitness and has transformed over hundreds of clients through his training"
+        />
+        <meta
+          name="keywords"
+          content="Venkat Fitness Trainer"
+        />
+
+        <meta
+          property="og:title"
+          content="Venkat Fitness Trainer - Best Fitness Trainer in Hyderabad - India"
+        />
+        <meta
+          property="og:description"
+          content="Venkat Fitness Trainer is the Best Fitness Trainer in Hyderabad having 15+ Years experience in the field of fitness and has transformed over hundreds of clients through his training"
+        />
+        <meta
+          property="og:image"
+          content=""
+        />
+        <meta property="og:url" content="https://venketfitness.com/" />
+      </Helmet>
+
+        
         <div className='top-[120px] relative'>
             <div>
                 <img src={banner} alt='Venkat Trainer' className='w-full hidden lg:block' />
@@ -189,6 +221,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
