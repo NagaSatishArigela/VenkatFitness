@@ -138,7 +138,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹2000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -146,7 +146,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹5000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -154,7 +154,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹2000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -162,7 +162,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹5000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
             </Grid>
@@ -173,7 +173,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹2000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -181,7 +181,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹5000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -189,7 +189,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹2000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -197,7 +197,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹5000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
             </Grid>
@@ -208,7 +208,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹2000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -216,7 +216,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹5000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -224,7 +224,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹2000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -232,7 +232,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Personalized Nutrition Plan - Diet Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹5000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
             </Grid>
@@ -243,7 +243,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px', textAlign: 'center' }}>Couple Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹15000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -251,7 +251,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px', textAlign: 'center' }}>Couple Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹40000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Duration 3 Months</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -259,7 +259,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px', textAlign: 'center' }}>Couple Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹70000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Duration 6 Months</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -267,7 +267,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px', textAlign: 'center' }}>Couple Plan</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹125,000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Duration 1 Year</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
             </Grid>
@@ -278,7 +278,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Premium Customised Plan (Live Class)</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹15000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Monthly</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -286,7 +286,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Premium Customised Plan (Live Class)</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹40000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Duration 3 Months</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -294,7 +294,7 @@ const Training = () => {
                         <Box className="card p-6 bg-primary shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>Premium Customised Plan (Live Class)</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹70,000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Duration 6 Months</Typography>
-                        <Link to='/contact'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
@@ -302,7 +302,7 @@ const Training = () => {
                         <Box className="card p-6 bg-Teal shadow-lg font-Poppins text-2xl font-bold" style={{ boxShadow: '0px 0px 10px 0px #ffffff', marginBottom: '8px' }}>Premium Customised Plan (Live Class)</Box>
                         <Typography variant="h4" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '600' }}>₹120,000</Typography>
                         <Typography variant="h5" className='text-center font-semibold py-4 font-Poppins'>Duration 1 Year</Typography>
-                        <Link to='/contact'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
+                        <Link to='/contact-us'><button className='bg-Teal border-2 px-4 py-2 text-center m-auto flex font-semibold font-Poppins'>Join Now</button></Link>
                     </Box>
                 </Grid>
             </Grid>
