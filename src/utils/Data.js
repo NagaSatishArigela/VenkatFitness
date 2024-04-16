@@ -46,27 +46,27 @@ import f16 from "../assets/16.webp";
 export const navlinks = [
   {
     id: 1,
-    link: "/home",
+    link: "/",
     name: "Home",
   },
   {
     id: 2,
-    link: "/online-training",
-    name: "Online Trianing",
+    link: "/online-training/",
+    name: "Online Training",
   },
   {
     id: 3,
-    link: "transformations",
+    link: "transformations/",
     name: "Transformations",
   },
   {
     id: 4,
-    link: "/about-me",
+    link: "/about-me/",
     name: "About Me",
   },
   {
     id: 5,
-    link: "/contact-us",
+    link: "/contact-us/",
     name: "Contact Us",
   },
 ];

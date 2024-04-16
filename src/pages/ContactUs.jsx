@@ -1,15 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import ContactPic from "../assets/contact-Fitness-Traier-in-India.jpeg";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 const ContactUs = () => {
-  const [send, setSend] = useState(false);
   const history = useNavigate();
   const form = useRef();
+  
   const sendEmail = (e) => {
     e.preventDefault();
+    const formData = new FormData(form.current);
     emailjs
       .sendForm(
         "service_i2h82eb",
@@ -21,7 +22,6 @@ const ContactUs = () => {
         (result) => {
           console.log(result.text);
           if (result) {
-            setSend(true);
             form.current.reset();
             history("/thank-you");
           }
@@ -30,10 +30,23 @@ const ContactUs = () => {
           console.log(error.text);
         }
       );
+
+      fetch(
+        "https://script.google.com/macros/s/AKfycbzxZdBbIY2hr0Gxr1gjeM7jID7NpVTVoaB7D3ID8vV7Ws00z64u-q8rJP1WoI0kDW29/exec",
+        {
+          method: "POST",
+          body: formData
+        }
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
   };
-  const handleClose = () => {
-    setSend(false);
-  };
+
   return (
     <>
       <Helmet>
