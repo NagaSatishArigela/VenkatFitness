@@ -75,6 +75,13 @@ const Home = () => {
         ]
     }
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // This will animate the scroll to the top
+        });
+    };
+
     return (
         <>
         <Helmet>
@@ -217,7 +224,7 @@ const Home = () => {
                     <Typography variant='h2' sx={{ fontFamily: 'Poppins', fontSize: '18px', padding: '20px' }}>Flexible membership packages to suit all levels of training to help achieve your fitness goals</Typography>
                 </div>
                 <div className='lg:py-[50px] py-[10px] m-auto'>
-                    <Link to='/contact-us'><button className='border-2 p-4 text-xl font-semibold bg-primary'>Join Us</button></Link>
+                    <Link to='/contact-us'><button onClick={scrollToTop} className='border-2 p-4 text-xl font-semibold bg-primary'>Join Us</button></Link>
                 </div>
             </div>
         </div>
