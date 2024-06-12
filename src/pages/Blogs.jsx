@@ -63,7 +63,7 @@ const Blogs = ({Blogs}) => {
                   }
                   alt="Blog Cover"
                 />
-                <div className="blog-content">
+                <div className="blog-contents">
                   <h6 className="blog-title">{blog.title}</h6>
                   <p className="blog-description">{blog.description}</p>
                   <div style={{ position: "absolute", bottom: "0px" }}>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./index.css";
-// import Contact from "./Contact";
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
+import Contact from "./Contact";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const BlogContent = ({ blogs, categories }) => {
   const { blogID } = useParams();
@@ -66,7 +66,7 @@ const BlogContent = ({ blogs, categories }) => {
 
             {/* Second Column */}
             <div className="contact-form">
-              {/* <Contact /> */}
+              <Contact />
               <h1>Categories</h1>
               <ul className="categories">
                 {categories?.map((category, index) => (
@@ -82,7 +82,7 @@ const BlogContent = ({ blogs, categories }) => {
               </ul>
             </div>
           </div>
-          {/* <div className="related-posts mt-10">
+          <div className="related-posts mt-10">
             {relatedPosts.length > 0 && <h2 className="text-xl font-bold mb-5">Related Posts</h2>}
             {relatedPosts.length > 0 &&
               (relatedPosts.length > 3 ? (
@@ -128,7 +128,7 @@ const BlogContent = ({ blogs, categories }) => {
                   ))}
                 </div>
               ))}
-          </div> */}
+          </div>
         </div>
       </div>
       <style jsx>{`
