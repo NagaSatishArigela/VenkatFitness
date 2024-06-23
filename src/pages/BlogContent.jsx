@@ -5,6 +5,7 @@ import Contact from "./Contact";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import parse from 'html-react-parser';
+import bannerImage from '../assets/Venkat-Fitness-Transformations-scaled-e1704266804184-2048x734.jpeg';
 
 const BlogContent = ({ blogs, categories }) => {
   const { slug } = useParams();
@@ -29,6 +30,7 @@ const BlogContent = ({ blogs, categories }) => {
         setRelatedPosts(related);
       }
     }
+    window.scrollTo(0, 0);
   }, [slug, blogs]);
 
   const responsive = {
@@ -59,7 +61,7 @@ const BlogContent = ({ blogs, categories }) => {
             <div className="blog-content">
               <img
                 className="cover-image"
-                src={`${blog?.bannerImage?.url}`}
+                src={blog?.bannerImage?.url ?? bannerImage}
                 alt="Blog Cover"
               />
               <h1 className="font-bold text-2xl my-1 pt-5">{blog?.title}</h1>
@@ -94,13 +96,13 @@ const BlogContent = ({ blogs, categories }) => {
                   {relatedPosts.map((post) => (
                     <Link
                       key={post.id}
-                      to={`/blog/${post.id}`}
+                      to={`/blog/${post.slug}`}
                       style={{ textDecoration: "none", color: "#000" }}
                     >
                       <div className="related-post-card">
                         {post.bannerImage && (
                           <img
-                            src={post.bannerImage.url}
+                            src={post.bannerImage?.url ?? bannerImage}
                             alt={post.title}
                             className="related-post-image"
                           />
@@ -118,13 +120,13 @@ const BlogContent = ({ blogs, categories }) => {
                   {relatedPosts.map((post) => (
                     <Link
                       key={post.id}
-                      to={`/blog/${post.id}`}
+                      to={`/blog/${post.slug}`}
                       style={{ textDecoration: "none", color: "#000" }}
                     >
                       <div key={post.id} className="related-post-card">
                         {post.bannerImage && (
                           <img
-                            src={post.bannerImage.url}
+                            src={post.bannerImage?.url ?? bannerImage}
                             alt={post.title}
                             className="related-post-image"
                           />
