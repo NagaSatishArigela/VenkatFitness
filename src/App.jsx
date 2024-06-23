@@ -14,6 +14,7 @@ import ThankYou from './components/ThankYou';
 import Blogs from './pages/Blogs';
 import { QUERY_SLUG_CATEGORIES, QUERY_SLUG_POSTS, grahcms } from './utils/Queries';
 import BlogContent from './pages/BlogContent';
+import CategoryBlogs from './pages/CategoryBlogs';
 
 function App() {
   const [categories, setCategories] = React.useState([]);
@@ -56,7 +57,8 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/online-training" element={<Training />} />
           <Route path='/blogs' element={<Blogs Blogs={posts}/>}/>
-          <Route path="/blog/:blogID" element={<BlogContent blogs={posts} categories={categories}/>}/>
+          <Route path="/blog/:slug" element={<BlogContent blogs={posts} categories={categories}/>}/>
+          <Route path="/blog/category/:name" element={<CategoryBlogs posts={posts} categories={categories}/>}/>
           <Route path="/thank-you" element={<ThankYou/>}/>
         </Routes>
         <Footer />

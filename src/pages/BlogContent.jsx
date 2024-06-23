@@ -4,26 +4,32 @@ import "./index.css";
 import Contact from "./Contact";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import parse from 'html-react-parser';
 
 const BlogContent = ({ blogs, categories }) => {
-  const { blogID } = useParams();
+  const { slug } = useParams();
   const [blog, setBlog] = useState({});
   const [relatedPosts, setRelatedPosts] = useState([]);
-  
+
   useEffect(() => {
     if (blogs) {
-      const currentBlog = blogs.find((blog) => blog.id === blogID);
+      const currentBlog = blogs.find((blog) => blog.slug === slug);
       setBlog(currentBlog);
 
       if (currentBlog) {
-        const currentBlogCategoryIds = currentBlog.categories.map((ccat) => ccat.id);
+        const currentBlogCategoryIds = currentBlog.categories.map(
+          (ccat) => ccat.id
+        );
         const related = blogs.filter(
-          (b) => b.categories.some((cat) => currentBlogCategoryIds.includes(cat.id)) && b.id !== blogID
+          (b) =>
+            b.categories.some((cat) =>
+              currentBlogCategoryIds.includes(cat.id)
+            ) && b.slug !== slug
         );
         setRelatedPosts(related);
       }
     }
-  }, [blogID, blogs]);
+  }, [slug, blogs]);
 
   const responsive = {
     superLargeDesktop: {
@@ -57,11 +63,7 @@ const BlogContent = ({ blogs, categories }) => {
                 alt="Blog Cover"
               />
               <h1 className="font-bold text-2xl my-1 pt-5">{blog?.title}</h1>
-              <div
-                className="pt-5"
-                dangerouslySetInnerHTML={{ __html: blog?.content?.html }}
-              >
-              </div>
+              <div className="pt-5">{parse(blog?.content?.html || "")}</div>
             </div>
 
             {/* Second Column */}
@@ -82,8 +84,10 @@ const BlogContent = ({ blogs, categories }) => {
               </ul>
             </div>
           </div>
-          <div className="related-posts mt-10">
-            {relatedPosts.length > 0 && <h2 className="text-xl font-bold mb-5">Related Posts</h2>}
+          <div className="related-posts pt-[185px]">
+            {relatedPosts.length > 0 && (
+              <h2 className="text-xl font-bold mb-5 ml-5">Related Posts</h2>
+            )}
             {relatedPosts.length > 0 &&
               (relatedPosts.length > 3 ? (
                 <Carousel responsive={responsive}>
@@ -107,7 +111,10 @@ const BlogContent = ({ blogs, categories }) => {
                   ))}
                 </Carousel>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{marginBottom: '50px'}}>
+                <div
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+                  style={{ marginBottom: "50px" }}
+                >
                   {relatedPosts.map((post) => (
                     <Link
                       key={post.id}

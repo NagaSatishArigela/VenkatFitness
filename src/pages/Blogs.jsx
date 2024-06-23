@@ -51,15 +51,15 @@ const Blogs = ({Blogs}) => {
         <div className="blog-grid">
           {currentItems.map((blog) => (
             <Link
-              key={blog.blogID}
-              to={`/blog/${blog.id}`}
+              key={blog.id}
+              to={`/blog/${blog.slug}`}
               className="blog-card"
             >
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
                   src={
-                    blog?.bannerImage.url ? blog.bannerImage.url : defaultPic
+                    blog?.bannerImage?.url ? blog.bannerImage.url : bannerImage
                   }
                   alt="Blog Cover"
                 />
@@ -68,7 +68,7 @@ const Blogs = ({Blogs}) => {
                   <p className="blog-description">{blog.description}</p>
                   <div style={{ position: "absolute", bottom: "0px" }}>
                     <Link
-                      to={`/blog/${blog.id}`}
+                      to={`/blog/${blog.slug}`}
                       style={{
                         color: "#04879C",
                         textDecoration: "none",

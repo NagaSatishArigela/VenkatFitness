@@ -5,11 +5,13 @@ export const grahcms = new GraphQLClient('https://api-ap-south-1.hygraph.com/v2/
 const category = `
   id
   name
+  slug
 `;
 
 const post = `
   id
   title
+  slug
   bannerImage { 
     url 
   }
