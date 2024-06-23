@@ -116,8 +116,8 @@ const Home = () => {
         
         <div className='top-[120px] relative'>
             <div>
-                <img src={banner} alt='Venkat Trainer' className='w-full hidden lg:block' />
-                <img src={mobileBanner} alt='Venkat Trainer' className='w-full lg:hidden' />
+                <img src={banner} alt='Venkat Trainer' className='w-full hidden lg:block' loading='lazy'/>
+                <img src={mobileBanner} alt='Venkat Trainer' className='w-full lg:hidden' loading='lazy'/>
             </div>
             <div className='flex m-8'>
                 <h1 className="sm:text-5xl font-extrabold font-Poppins lg:p-8 p-2 m-auto" style={{ fontWeight: 'bolder' }}>Venkat Fitness – Certified Celebrity Fitness Trainer</h1>
@@ -127,7 +127,7 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Box 1 */}
                     {servicesData.map((service) => <div className="bg-Teal rounded-t-full p-6 h-auto" key={service.id}>
-                        <img src={service.url} alt="Service 1" className="max-w-[95%] m-auto" />
+                        <img src={service.url} alt="Service 1" className="max-w-[95%] m-auto" loading='lazy'/>
                         <h5 className="text-white text-center text-2xl py-2 font-Poppins font-semibold mb-2">{service.title}</h5>
                         <div className='py-12 flex justify-center'>
                             <ul className="text-white flex flex-col justify-center items-start">
@@ -149,17 +149,17 @@ const Home = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* Skill Boxes */}
                             <div className="p-2 rounded-lg shadow-md flex flex-col justify-evenly items-center">
-                                <img src={profile} alt="profile" className="h-20 p-6 border-4 border-Teal" />
+                                <img src={profile} alt="profile" className="h-20 p-6 border-4 border-Teal" loading='lazy'/>
                                 <h3 className="text-2xl font-semibold mb-4 mt-4 font-Poppins">Professional Trainer</h3>
                             </div>
 
                             <div className="p-2 rounded-lg shadow-md flex flex-col justify-evenly items-center">
-                                <img src={list} alt="list" className="h-20 p-6 border-4 border-Teal" />
+                                <img src={list} alt="list" className="h-20 p-6 border-4 border-Teal" loading='lazy'/>
                                 <h3 className="text-2xl font-semibold mb-4 mt-4 font-Poppins">Have Done Certification</h3>
                             </div>
 
                             <div className="p-2 rounded-lg shadow-md flex flex-col justify-evenly items-center">
-                                <img src={people} alt="people" className="h-20 p-6 border-4 border-Teal" />
+                                <img src={people} alt="people" className="h-20 p-6 border-4 border-Teal" loading='lazy'/>
                                 <h3 className="text-2xl font-semibold mb-4 mt-4 font-Poppins">Friendly Personal Trainer</h3>
                             </div>
                         </div>
@@ -211,7 +211,7 @@ const Home = () => {
                                     mb: 2,
                                 }}
                             >
-                                <img src={gallery.url} alt={gallery.name} style={{ width: '100%', margin: '0 8px', }} />
+                                <img src={gallery.url} alt={gallery.name} style={{ width: '100%', margin: '0 8px', }} loading='lazy'/>
                             </Box>
                         ))}
                     </Slider>

@@ -33,7 +33,7 @@ const Blogs = ({Blogs}) => {
       >
         <header className="bannerb">
           <div className="banner-overlay">
-            <img src={bannerImage} alt="blogs" className="banner-image" />
+            <img src={bannerImage} alt="blogs" className="banner-image" loading="lazy"/>
           </div>
         </header>
       </div>
@@ -62,6 +62,7 @@ const Blogs = ({Blogs}) => {
                     blog?.bannerImage?.url ? blog.bannerImage.url : bannerImage
                   }
                   alt="Blog Cover"
+                  loading="lazy"
                 />
                 <div className="blog-contents">
                   <h6 className="blog-title">{blog.title}</h6>

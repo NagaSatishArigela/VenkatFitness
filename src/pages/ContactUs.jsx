@@ -77,7 +77,7 @@ const ContactUs = () => {
       </Helmet>
       <div className="container mx-auto p-4 lg:pt-14 lg:flex lg:justify-center">
         <div className="lg:w-1/2 lg:mr-6">
-          <img src={ContactPic} alt="Contact" className="w-full" />
+          <img src={ContactPic} alt="Contact" className="w-full" loading="lazy"/>
         </div>
         <div className="lg:w-1/2 m-auto flex flex-col justify-center items-center">
           <h1

@@ -48,7 +48,7 @@ console.log(filteredBlogs, 'fil')
       </div> */}
         <header className="bannerb">
           <div className="banner-overlay">
-            <img src={bannerImage} alt="blogs" className="banner-image" />
+            <img src={bannerImage} alt="blogs" className="banner-image" loading="lazy"/>
             <div className="banner-text">
               <h1>{name}</h1>
             </div>
