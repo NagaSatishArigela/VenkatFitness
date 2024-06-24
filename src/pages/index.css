@@ -161,6 +161,10 @@
   margin: 10px 0;
 }
 
+.blog-content p {
+  margin: 10px 0;
+}
+
 .cover-image {
     width: 100%;
     height: auto;
