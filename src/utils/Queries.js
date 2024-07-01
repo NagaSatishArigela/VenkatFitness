@@ -18,7 +18,8 @@ const post = `
   content { 
     html 
   }
-  description
+  description,
+  createdAt,
 `;
 
 export const QUERY_SLUG_CATEGORIES = gql`
@@ -31,7 +32,7 @@ export const QUERY_SLUG_CATEGORIES = gql`
 
 export const QUERY_SLUG_POSTS = gql`
   {
-    posts(first: 100) {
+    posts(first: 100, orderBy: createdAt_DESC) {
       ${post}
       categories {
         ${category}
