@@ -5,7 +5,7 @@ import './index.css';
 
 const Blogs = ({Blogs}) => {
     const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
+  const itemsPerPage = 20;
 
   const handleClick = (event) => {
     setCurrentPage(Number(event.target.id));
