@@ -91,24 +91,31 @@
       }
   }
 
-  #page-numbers {
+  .page-numbers {
     display: flex;
-    justify-content: center;
-    padding: 20px 0;
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
   }
   
-  #page-numbers li {
+  .page-number {
     margin: 0 5px;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
     cursor: pointer;
-    list-style-type: none;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
   }
   
-  #page-numbers li.active {
+  .page-number.active {
     background-color: #04879C;
-    color: white;
+    color: #fff;
   }
+  
+  .page-number:hover {
+    background-color: #04879C;
+  }
+  
 
   .containerl {
     max-width: 1240px;

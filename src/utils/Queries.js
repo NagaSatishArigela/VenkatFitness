@@ -30,9 +30,9 @@ export const QUERY_SLUG_CATEGORIES = gql`
   }
 `;
 
-export const QUERY_SLUG_POSTS = gql`
+export const QUERY_SLUG_POSTS =  (postsPerPage, currentPage) => gql`
   {
-    posts(first: 200, orderBy: createdAt_DESC) {
+    posts(first: ${postsPerPage}, skip: ${currentPage * postsPerPage - postsPerPage}, orderBy: createdAt_DESC) {
       ${post}
       categories {
         ${category}

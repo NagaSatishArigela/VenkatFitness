@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import "./index.css";
 import Contact from "./Contact";
@@ -143,7 +144,7 @@ const BlogContent = ({ blogs, categories }) => {
           </div>
         </div>
       </div>
-      <style jsx>{`
+      <style>{`
         .related-post-card {
           display: flex;
           flex-direction: column;
@@ -170,6 +171,11 @@ const BlogContent = ({ blogs, categories }) => {
       `}</style>
     </>
   );
+};
+
+BlogContent.propTypes = {
+  blogs: PropTypes.object.isRequired,
+  categories: PropTypes.array.isRequired,
 };
 
 export default BlogContent;

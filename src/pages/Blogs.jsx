@@ -1,25 +1,18 @@
-import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import bannerImage from '../assets/Venkat-Fitness-Transformations-scaled-e1704266804184-2048x734.jpeg';
-import './index.css';
+import bannerImage from "../assets/Venkat-Fitness-Transformations-scaled-e1704266804184-2048x734.jpeg";
+import "./index.css";
+import Paginate from "./Paginate";
 
-const Blogs = ({Blogs}) => {
-    const [currentPage, setCurrentPage] = useState(1);
+const Blogs = ({ Blogs, currentPage, onPageChange }) => {
+
   const itemsPerPage = 20;
-
-  const handleClick = (event) => {
-    setCurrentPage(Number(event.target.id));
-    window.scrollTo(0, 0);
-  };
 
   const pages = [];
   for (let i = 1; i <= Math.ceil(Blogs.length / itemsPerPage); i++) {
     pages.push(i);
   }
 
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = Blogs.slice(indexOfFirstItem, indexOfLastItem);
   return (
     <>
       <div
@@ -34,7 +27,12 @@ const Blogs = ({Blogs}) => {
       >
         <header className="bannerb">
           <div className="banner-overlay">
-            <img src={bannerImage} alt="blogs" className="banner-image" loading="lazy"/>
+            <img
+              src={bannerImage}
+              alt="blogs"
+              className="banner-image"
+              loading="lazy"
+            />
           </div>
         </header>
       </div>
@@ -46,16 +44,12 @@ const Blogs = ({Blogs}) => {
           paddingTop: "55px",
           alignItems: "center",
           paddingBottom: "40px",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
       >
         <div className="blog-grid">
-          {currentItems.map((blog) => (
-            <Link
-              key={blog.id}
-              to={`/blog/${blog.slug}`}
-              className="blog-card"
-            >
+          {Blogs.map((blog) => (
+            <Link key={blog.id} to={`/blog/${blog.slug}`} className="blog-card">
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
@@ -85,21 +79,22 @@ const Blogs = ({Blogs}) => {
             </Link>
           ))}
         </div>
-        <ul id="page-numbers">
-        {pages.map((number) => (
-          <li
-            key={number}
-            id={number}
-            onClick={handleClick}
-            className={currentPage === number ? "active" : null}
-          >
-            {number}
-          </li>
-        ))}
-      </ul>
+        <Paginate
+          postsPerPage={itemsPerPage}
+          totalPosts={Blogs.length}
+          paginate={onPageChange}
+          previousPage={() => onPageChange(currentPage - 1)}
+          nextPage={() => onPageChange(currentPage + 1)}
+        />
       </div>
     </>
   );
+};
+
+Blogs.propTypes = {
+  Blogs: PropTypes.array.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
 };
 
 export default Blogs;
