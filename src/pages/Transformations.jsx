@@ -13,17 +13,18 @@ const Transformations = () => {
     return (
         <>
             <Helmet>
+                <title>Transformations By Venkat Fitness Trainer - #1 Body Transformation Coach</title>
                 <meta
                     name="title"
-                    content="Transformations by VENKAT FITNESS || Best FITNESS TRAINER in Hyderabad"
+                    content="Transformations By Venkat Fitness Trainer - #1 Body Transformation Coach"
                 />
                 <meta
                     name="description"
-                    content="Here We go the Transformations of Our Clients you can see their transformation journeys.Venkat Fitness Trainer is the Best FITNESS TRAINER in Hyderabad for your Fitness Journey."
+                    content="Venkat Fitness Trainer offers personalized body transformation programs led by the #1 Body Transformation Coach. Achieve your fitness goals with tailored workouts, nutrition plans, and expert guidance."
                 />
                 <meta
                     name="keywords"
-                    content="Transformations"
+                    content="Body transformation coach near me, Online body transformation coach,Body transformation women Coach,Best body transformation coach,  Online body transformation coach India, Fitness trainers online, Body Transformation Coach, Best Online Fitness Trainer and Nutritionist in India"
                 />
 
                 <meta

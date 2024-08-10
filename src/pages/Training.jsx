@@ -72,17 +72,19 @@ const Training = () => {
     return (
         <>
             <Helmet>
+                <title>Online Fitness Training - #1 Online Personal Trainer India</title>
                 <meta
                     name="title"
                     content="Online Training - Best Fitness Trainer in Hyderabad - India"
                 />
                 <meta
                     name="description"
-                    content="Venkat Fitness Trainer is the Best Fitness Trainer in Hyderabad having 15+ Years experience in the field of fitness and has transformed over hundreds of clients through his training"
+                    content="Online Fitness Training by Certified Fitness Trainer Venkat Madamala provides you the best personalized plans for your fitness goals. Join Today to Unlock a new version of you!"
                 />
                 <meta
                     name="keywords"
-                    content="Venkat Fitness Trainer"
+                    content="Venkat Fitness Trainer, Online fitness training, Online Personal Trainer, Best Online Fitness Training in India, Online Fitness Coach, Fitness Consultant Online,Online Personal Trainer India,
+Online Workout Programs, Best online fitness training, Online fitness training for weight loss, Online female personal trainer India, India's Best Online Fitness Trainer, Online Personal Trainer, Venkat fitness online training"
                 />
 
                 <meta

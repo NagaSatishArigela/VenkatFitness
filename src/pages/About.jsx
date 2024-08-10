@@ -6,17 +6,18 @@ const About = () => {
     return (
         <>
             <Helmet>
+                <title> About Venkat Fitness Trainer - #1 Expert in Body Transformation</title>
                 <meta
                     name="title"
-                    content="About Me - Best Fitness Trainer in Hyderabad - India"
+                    content="About Venkat Fitness Trainer - #1 Expert in Body Transformation"
                 />
                 <meta
                     name="description"
-                    content=""
+                    content="Discover the story of Venkat, the expert body transformation coach behind Venkat Fitness Trainer. Learn about his fitness journey, philosophy, and dedication to helping clients achieve their health and fitness goals."
                 />
                 <meta
                     name="keywords"
-                    content="About Me"
+                    content="Venkat fitness trainer price,Venkat fitness trainer wikipedia,Venkat fitness trainer reviews,Venkat fitness trainer age,Venkat Fitness online training,Venkat Fitness Trainer Diet Plan,Services offered by Venkat Fitness,Best fitness trainer in Hyderabad"
                 />
 
                 <meta

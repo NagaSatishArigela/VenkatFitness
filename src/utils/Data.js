@@ -27,6 +27,13 @@ import onlinePersonal5 from "../assets/Transformation Trainer.jpeg";
 import onlinePersonal6 from "../assets/Best Online Fitness Training in Indi.jpg";
 import onlinePersonal7 from "../assets/bestpweight-loss-coach-online.jpg";
 import onlinePersonal8 from "../assets/India's Best Online Fitness Trainer.jpeg";
+import onlinePersonal9 from "../assets/best online fitness trainer in india.jpg";
+import onlinePersonal10 from "../assets/online fitness coach.jpg";
+import onlinePersonal11 from "../assets/online gym training.webp";
+import onlinePersonal12 from "../assets/online personal training.jpg";
+import onlinePersonal13 from "../assets/online-fitness-trainer.jpg";
+import onlinePersonal14 from "../assets/personal trainer for weight loss.jpg";
+import onlinePersonal15 from "../assets/personal trainer online.webp";
 import f2 from "../assets/2.webp";
 import f3 from "../assets/3.webp";
 import f4 from "../assets/4.webp";
@@ -158,9 +165,9 @@ export const servicesData = [
     list: ["Project Research", "Budgeting", "Implementing", "Management"],
   },
 ];
-const breakpoints = [4320, 2160, 1080, 640, 384, 256, 128];
-const unsplashLink = (id, width, height) =>
-  `https://source.unsplash.com/${id}/${width}x${height}`;
+// const breakpoints = [4320, 2160, 1080, 640, 384, 256, 128];
+// const unsplashLink = (id, width, height) =>
+//   `https://source.unsplash.com/${id}/${width}x${height}`;
 export const Images = [
   Srikanth,
   ram,
@@ -184,4 +191,11 @@ export const Images = [
   onlinePersonal6,
   onlinePersonal7,
   onlinePersonal8,
+  onlinePersonal9,
+  onlinePersonal10,
+  onlinePersonal11,
+  onlinePersonal12,
+  onlinePersonal13,
+  onlinePersonal14,
+  onlinePersonal15
 ];

@@ -51,15 +51,23 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
+        <title>
+          Contact Venkat Fitness Trainer - Get in Touch with the #1 Fitness
+          Trainer
+        </title>
         <meta
           name="title"
-          content="CONTACT US - #1 BEST FITNESS TRAINER IN HYDERABAD - INDIA"
+          content="Contact Venkat Fitness Trainer - Get in Touch with the #1 Fitness Trainer"
         />
         <meta
           name="description"
-          content="Contact Us for the BEST Personal Training in Hyderabad by Certified Fitness Trainer VENKAT MADAMALA who has an experience of over 15+ years."
+          content="Reach out to Venkat Fitness Trainer for personalized fitness and body transformation coaching. Contact us today to start your journey towards a healthier, fitter you!"
         />
-        <meta name="keywords" content="Contact US" />
+        <meta
+          name="keywords"
+          content="Venkat fitness online training, fitness consultant, Top Personal Gym Trainers in Hyderabad, Who is the best fitness trainer in Hyderabad?, Gyms with Personal Trainer,
+Fitness Studio Hyderabad, Personal Training Studio"
+        />
 
         <meta
           property="og:title"
@@ -77,7 +85,12 @@ const ContactUs = () => {
       </Helmet>
       <div className="container mx-auto p-4 lg:pt-14 lg:flex lg:justify-center">
         <div className="lg:w-1/2 lg:mr-6">
-          <img src={ContactPic} alt="Contact" className="w-full" loading="lazy"/>
+          <img
+            src={ContactPic}
+            alt="Contact"
+            className="w-full"
+            loading="lazy"
+          />
         </div>
         <div className="lg:w-1/2 m-auto flex flex-col justify-center items-center">
           <h1
@@ -221,9 +234,7 @@ const ContactUs = () => {
             </div>
 
             <div className="mb-4">
-              <ReCAPTCHA
-                sitekey="6LcB_igpAAAAAML-8W1XUDNnI3IJ4_KYGIBYoJgn"
-              />
+              <ReCAPTCHA sitekey="6LcB_igpAAAAAML-8W1XUDNnI3IJ4_KYGIBYoJgn" />
             </div>
 
             <div className="text-center">
