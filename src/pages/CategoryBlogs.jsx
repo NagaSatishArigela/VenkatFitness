@@ -70,7 +70,7 @@ console.log(filteredBlogs, 'fil')
           {filteredBlogs.map((blog) => (
             <a
               key={blog.id}
-              href={`/blog/${blog.slug}`}
+              href={`${blog.slug}`}
               className="blog-card"
             >
               <div className="blog-card-inner">
