@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -109,9 +109,13 @@ function App() {
             }
           />
           <Route
-            path="/blog/:slug"
+            path="/:slug"
             element={<BlogContent blogs={posts} categories={categories} />}
           />
+          <Route
+          path="/blog/:slug"
+          element={<Navigate to="/:slug" />}
+        />
           <Route
             path="/blog/category/:name"
             element={<CategoryBlogs posts={posts} categories={categories} />}

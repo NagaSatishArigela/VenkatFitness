@@ -49,7 +49,7 @@ const Blogs = ({ Blogs, currentPage, onPageChange }) => {
       >
         <div className="blog-grid">
           {Blogs.map((blog) => (
-            <Link key={blog.id} to={`/blog/${blog.slug}`} className="blog-card">
+            <Link key={blog.id} to={`/${blog.slug}`} className="blog-card">
               <div className="blog-card-inner">
                 <img
                   className="blog-cover"
@@ -64,7 +64,7 @@ const Blogs = ({ Blogs, currentPage, onPageChange }) => {
                   <p className="blog-description">{blog.description}</p>
                   <div style={{ position: "absolute", bottom: "0px" }}>
                     <Link
-                      to={`/blog/${blog.slug}`}
+                      to={`/${blog.slug}`}
                       style={{
                         color: "#04879C",
                         textDecoration: "none",

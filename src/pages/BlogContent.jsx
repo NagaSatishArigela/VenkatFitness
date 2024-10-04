@@ -98,7 +98,7 @@ const BlogContent = ({ blogs, categories }) => {
                   {relatedPosts.map((post) => (
                     <Link
                       key={post.id}
-                      to={`/blog/${post.slug}`}
+                      to={`/${post.slug}`}
                       style={{ textDecoration: "none", color: "#000" }}
                     >
                       <div className="related-post-card">
@@ -123,7 +123,7 @@ const BlogContent = ({ blogs, categories }) => {
                   {relatedPosts.map((post) => (
                     <Link
                       key={post.id}
-                      to={`/blog/${post.slug}`}
+                      to={`/${post.slug}`}
                       style={{ textDecoration: "none", color: "#000" }}
                     >
                       <div key={post.id} className="related-post-card">
