@@ -8,7 +8,7 @@ import icon3 from '../assets/youtube.svg'
 import icon4 from '../assets/linkedin-161-svgrepo-com.svg'
 import icon5 from '../assets/spotify-svgrepo-com.svg'
 
-export const socialLinks = [
+const socialLinksArray = [
     {
         name: 'Facebook',
         link: 'https://www.facebook.com/venkat.fitnesstrainer/',
@@ -73,7 +73,7 @@ const SocialLinkItem = ({ item }) => (
             href={item.link}
         >
             {/* eslint-disable-next-line */}
-            <img src={item.icon} alt={item.name + 'icon'} />
+            <img src={item.icon} alt={item.name + 'icon'} loading='lazy'/>
         </Link>
     </Box>
 )
@@ -92,7 +92,7 @@ const SocialLinks = () => {
                     listStyle: 'none',
                 }}
             >
-                {socialLinks.map((item) => {
+                {socialLinksArray.map((item) => {
                     return <SocialLinkItem key={item.name} item={item} />
                 })}
             </Box>

@@ -1,12 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
   const [send, setSend] = useState(false);
+  const [pageUrl, setPageUrl] = useState('');
+
+  useEffect(() => {
+    // Set the current page URL when the component mounts
+    setPageUrl(window.location.href);
+  }, []);
   const sendEmail = (e) => {
     e.preventDefault();
-    let templateId = "template_j9d1u3e";
+    let templateId = "template_d0hmndk";
     emailjs
       .sendForm(
         "service_i2h82eb",
@@ -115,6 +121,11 @@ const Contact = () => {
             backgroundColor: '#fff',
             fontFamily: 'sans-serif',
           }}
+        />
+         <input
+          type="hidden"
+          name="url"
+          value={pageUrl}
         />
         {/* <button className='btn'>Send Message</button> */}
         <input

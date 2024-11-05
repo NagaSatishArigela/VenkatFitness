@@ -1,6 +1,8 @@
 import { GraphQLClient, gql } from "graphql-request";
 
-export const grahcms = new GraphQLClient('https://api-ap-south-1.hygraph.com/v2/clx98k37t07hx07t8fwkiwot3/master')
+export const grahcms = new GraphQLClient(
+  "https://api-ap-south-1.hygraph.com/v2/clx98k37t07hx07t8fwkiwot3/master"
+);
 
 const category = `
   id
@@ -30,13 +32,46 @@ export const QUERY_SLUG_CATEGORIES = gql`
   }
 `;
 
-export const QUERY_SLUG_POSTS =  (postsPerPage, currentPage) => gql`
+export const QUERY_SLUG_POSTS = (postsPerPage, currentPage) => gql`
   {
-    posts(first: ${postsPerPage}, skip: ${currentPage * postsPerPage - postsPerPage}, orderBy: createdAt_DESC) {
+    posts(first: ${postsPerPage}, skip: ${
+  currentPage * postsPerPage - postsPerPage
+}, orderBy: createdAt_DESC) {
       ${post}
       categories {
         ${category}
       }
+    }
+  }
+`;
+
+export const QUERY_INDIVIDUAL_POST = gql`
+  query GetPostBySlug($slug: String!) {
+    posts(where: { slug: $slug }) {
+      ${post}
+      categories {
+      posts {
+        slug
+        title
+        id
+        bannerImage {
+          url
+        }
+      }
+    }
+    }
+  }
+`;
+
+export const QUERY_PRODUCTS = gql`
+  {
+    productCards {
+      title
+      productImage {
+        url
+      }
+      productUrl
+      id
     }
   }
 `;

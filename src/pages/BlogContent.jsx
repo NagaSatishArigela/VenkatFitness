@@ -1,38 +1,83 @@
 import { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import "./index.css";
 import Contact from "./Contact";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import parse from 'html-react-parser';
-import bannerImage from '../assets/Venkat-Fitness-Transformations-scaled-e1704266804184-2048x734.jpeg';
+import parse from "html-react-parser";
+import bannerImage from "../assets/Venkat-Fitness-Transformations-scaled-e1704266804184-2048x734.jpeg";
+import { grahcms, QUERY_INDIVIDUAL_POST, QUERY_PRODUCTS } from "../utils/Queries";
+import { BlogSkeleton, ProductSkeleton } from "../utils/Skelton";
 
-const BlogContent = ({ blogs, categories }) => {
+
+const ProductCard = ({ product }) => {
+  return (
+    <a
+      href={product.productUrl}
+      className="block border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white overflow-hidden"
+      target="_blank"
+      rel="noopener noreferrer"
+      key={product.id}
+    >
+      <img
+        src={product.productImage?.url}
+        alt={product.title}
+        className="w-full h-56 object-fill"
+        loading="lazy"
+      />
+      <div className="p-4 text-center">
+        <h3 className="text-lg font-semibold text-[#04897C]">
+          {product.title}
+        </h3>
+      </div>
+    </a>
+  );
+};
+
+const BlogContent = () => {
   const { slug } = useParams();
-  const [blog, setBlog] = useState({});
+  const [blog, setBlog] = useState(null);
   const [relatedPosts, setRelatedPosts] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (blogs) {
-      const currentBlog = blogs.find((blog) => blog.slug === slug);
-      setBlog(currentBlog);
+    const fetchBlogData = async () => {
+      try {
+        const data = await grahcms.request(QUERY_INDIVIDUAL_POST, { slug });
+        const fetchedBlog = data?.posts[0];
 
-      if (currentBlog) {
-        const currentBlogCategoryIds = currentBlog.categories.map(
-          (ccat) => ccat.id
-        );
-        const related = blogs.filter(
-          (b) =>
-            b.categories.some((cat) =>
-              currentBlogCategoryIds.includes(cat.id)
-            ) && b.slug !== slug
-        );
-        setRelatedPosts(related);
+        if (fetchedBlog) {
+          setBlog(fetchedBlog);
+
+          // Gather related posts from blog categories
+          const relatedPosts = fetchedBlog.categories
+            .flatMap((category) => category.posts)
+            .filter((post) => post.id !== fetchedBlog.id);
+
+          setRelatedPosts(relatedPosts);
+        } else {
+          console.warn(`No blog found for slug: ${slug}`);
+        }
+      } catch (error) {
+        console.error("Error fetching blog:", error);
+      } finally {
+        setIsLoading(false);
       }
-    }
+    };
+    const fetchProducts = async () => {
+      try {
+        const data = await grahcms.request(QUERY_PRODUCTS);
+        setProducts(data.productCards); // Set the fetched products
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchBlogData();
+    fetchProducts();
     window.scrollTo(0, 0);
-  }, [slug, blogs]);
+  }, [slug]);
 
   const responsive = {
     superLargeDesktop: {
@@ -53,97 +98,103 @@ const BlogContent = ({ blogs, categories }) => {
     },
   };
 
-  return (
-    <>
+  if (isLoading) {
+    return (
       <div className="w-full pb-10 bg-gray-100">
         <div className="container mx-auto">
           <div className="grid-container">
-            {/* First Column */}
-            <div className="blog-content">
-              <img
-                className="cover-image"
-                src={blog?.bannerImage?.url ?? bannerImage}
-                alt="Blog Cover"
-                loading="lazy"
-              />
-              <h1 className="font-bold text-2xl my-1 pt-5">{blog?.title}</h1>
-              <div className="pt-5">{parse(blog?.content?.html || "")}</div>
-            </div>
-
-            {/* Second Column */}
-            <div className="contact-form">
-              <Contact />
-              <h1>Categories</h1>
-              <ul className="categories">
-                {categories?.map((category, index) => (
-                  <li key={index} className="category-list">
-                    <Link
-                      to={`/blog/category/${category?.name}`}
-                      className="category-link"
-                    >
-                      {category?.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="related-posts pt-[185px]">
-            {relatedPosts.length > 0 && (
-              <h2 className="text-xl font-bold mb-5 ml-5">Related Posts</h2>
-            )}
-            {relatedPosts.length > 0 &&
-              (relatedPosts.length > 3 ? (
-                <Carousel responsive={responsive}>
-                  {relatedPosts.map((post) => (
-                    <Link
-                      key={post.id}
-                      to={`/${post.slug}`}
-                      style={{ textDecoration: "none", color: "#000" }}
-                    >
-                      <div className="related-post-card">
-                        {post.bannerImage && (
-                          <img
-                            src={post.bannerImage?.url ?? bannerImage}
-                            alt={post.title}
-                            className="related-post-image"
-                            loading="lazy"
-                          />
-                        )}
-                        <h3 className="related-post-title">{post.title}</h3>
-                      </div>
-                    </Link>
-                  ))}
-                </Carousel>
-              ) : (
-                <div
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-                  style={{ marginBottom: "50px" }}
-                >
-                  {relatedPosts.map((post) => (
-                    <Link
-                      key={post.id}
-                      to={`/${post.slug}`}
-                      style={{ textDecoration: "none", color: "#000" }}
-                    >
-                      <div key={post.id} className="related-post-card">
-                        {post.bannerImage && (
-                          <img
-                            src={post.bannerImage?.url ?? bannerImage}
-                            alt={post.title}
-                            className="related-post-image"
-                            loading="lazy"
-                          />
-                        )}
-                        <h3 className="related-post-title">{post.title}</h3>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+            <BlogSkeleton />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+              {[...Array(4)].map((_, index) => (
+                <ProductSkeleton key={index} />
               ))}
+            </div>
           </div>
         </div>
       </div>
+    );
+  }
+
+  return (
+    <div className="w-full pb-10 bg-gray-100">
+      <div className="container mx-auto">
+        <div className="grid-container">
+          {/* First Column */}
+          <div className="blog-content">
+            <img
+              className="cover-image"
+              src={blog?.bannerImage?.url ?? bannerImage}
+              alt="Blog Cover"
+              loading="lazy"
+            />
+            <h1 className="font-bold text-2xl my-1 pt-5">{blog?.title}</h1>
+            <div className="pt-5">{parse(blog?.content?.html || "")}</div>
+          </div>
+
+          {/* Second Column */}
+          <div className="contact-form">
+            <Contact />
+            <h1 className="text-xl font-bold mb-5">Products</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Related Posts Section */}
+        {relatedPosts.length > 0 && (
+          <div className="related-posts pt-[185px]">
+            <h2 className="text-xl font-bold mb-5 ml-5">Related Posts</h2>
+            {relatedPosts.length > 3 ? (
+              <Carousel responsive={responsive}>
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.id}
+                    to={`/${post.slug}`}
+                    style={{ textDecoration: "none", color: "#000" }}
+                  >
+                    <div className="related-post-card">
+                      <img
+                        src={post.bannerImage?.url ?? bannerImage}
+                        alt={post.title}
+                        className="related-post-image"
+                        loading="lazy"
+                      />
+                      <h3 className="related-post-title">{post.title}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </Carousel>
+            ) : (
+              <div
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+                style={{ marginBottom: "50px" }}
+              >
+                {relatedPosts.map((post) => (
+                  <Link
+                    key={post.id}
+                    to={`/${post.slug}`}
+                    style={{ textDecoration: "none", color: "#000" }}
+                  >
+                    <div className="related-post-card">
+                      <img
+                        src={post.bannerImage?.url ?? bannerImage}
+                        alt={post.title}
+                        className="related-post-image"
+                        loading="lazy"
+                      />
+                      <h3 className="related-post-title">{post.title}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
       <style>{`
         .related-post-card {
           display: flex;
@@ -169,13 +220,8 @@ const BlogContent = ({ blogs, categories }) => {
           text-align: center;
         }
       `}</style>
-    </>
+    </div>
   );
-};
-
-BlogContent.propTypes = {
-  blogs: PropTypes.object.isRequired,
-  categories: PropTypes.array.isRequired,
 };
 
 export default BlogContent;

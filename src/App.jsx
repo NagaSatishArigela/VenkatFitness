@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import "./App.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -12,11 +12,7 @@ import ContactUs from "./pages/ContactUs";
 import Training from "./pages/Training";
 import ThankYou from "./components/ThankYou";
 import Blogs from "./pages/Blogs";
-import {
-  QUERY_SLUG_CATEGORIES,
-  QUERY_SLUG_POSTS,
-  grahcms,
-} from "./utils/Queries";
+import { QUERY_SLUG_CATEGORIES, QUERY_SLUG_POSTS, grahcms } from "./utils/Queries";
 import BlogContent from "./pages/BlogContent";
 import CategoryBlogs from "./pages/CategoryBlogs";
 import { Helmet } from "react-helmet";
@@ -27,6 +23,7 @@ function App() {
   const [postsPerPage] = useState(21);
   const [currentPage, setCurrentPage] = useState(1);
 
+  // Fetch categories only once when the component mounts
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -36,37 +33,34 @@ function App() {
         console.error("Error fetching categories:", error);
       }
     };
-
     fetchCategories();
   }, []);
 
+  // Fetch posts whenever `postsPerPage` or `currentPage` changes
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const query = QUERY_SLUG_POSTS(postsPerPage, currentPage);
-        const data = await grahcms.request(query, {});
+        const data = await grahcms.request(query);
         setPosts(data.posts);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
     };
-
     fetchPosts();
   }, [postsPerPage, currentPage]);
 
-  const handlePageChange = (newPage) => {
+  // Use callback to avoid re-rendering children components unnecessarily
+  const handlePageChange = useCallback((newPage) => {
     setCurrentPage(newPage);
-  };
+  }, []);
 
   return (
     <BrowserRouter>
       <div>
         <Navbar />
         <Helmet>
-          <title>
-            Venkat Fitness Trainer - #1 Best Fitness Trainer in Hyderabad -
-            India
-          </title>
+          <title>Venkat Fitness Trainer - #1 Best Fitness Trainer in Hyderabad - India</title>
           <meta
             name="title"
             content="Venkat Fitness Trainer - Best Fitness Trainer in Hyderabad - India"
@@ -77,9 +71,8 @@ function App() {
           />
           <meta
             name="keywords"
-            content="Venkat Fitness Trainer,  fitness trainer venkat, best fitness trainer in hyderabad, Personal Trainer near me in Hyderabad, Personal fitness trainer in Hyderabad,Celebrity fitness trainers in Hyderabad,  Best fitness trainer in hyderabad for ladies, Best fitness trainer in hyderabad for weight loss, venket fitness, venket fitness trainer,venkat madamala, Best gym in hyderabad, Top Gyms in Jubilee Hills, Best gym in jubilee hills hyderabad, Best gym in jubilee hills with price, Gyms in Banjara Hills"
+            content="Venkat Fitness Trainer, fitness trainer venkat, best fitness trainer in hyderabad, Personal Trainer near me in Hyderabad, Personal fitness trainer in Hyderabad, Celebrity fitness trainers in Hyderabad, Best fitness trainer in hyderabad for ladies, Best fitness trainer in hyderabad for weight loss, venket fitness, venket fitness trainer, venkat madamala, Best gym in hyderabad, Top Gyms in Jubilee Hills, Best gym in jubilee hills hyderabad, Best gym in jubilee hills with price, Gyms in Banjara Hills"
           />
-
           <meta
             property="og:title"
             content="Venkat Fitness Trainer - Best Fitness Trainer in Hyderabad - India"
@@ -108,14 +101,11 @@ function App() {
               />
             }
           />
+          <Route path="/blog/:slug" element={<Navigate to="/:slug" />} />
           <Route
             path="/:slug"
-            element={<BlogContent blogs={posts} categories={categories} />}
+            element={<BlogContent />}
           />
-          <Route
-          path="/blog/:slug"
-          element={<Navigate to="/:slug" />}
-        />
           <Route
             path="/blog/category/:name"
             element={<CategoryBlogs posts={posts} categories={categories} />}

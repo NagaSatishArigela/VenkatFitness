@@ -44,7 +44,7 @@ const Transformations = () => {
             <div className='mt-2 py-20'>
                 <div className="py-8">
                     <div className="mx-auto text-center">
-                        <img src={bannerImage} alt="Banner" className="w-full h-auto" />
+                        <img src={bannerImage} alt="Banner" className="w-full h-auto" loading='lazy'/>
                     </div>
                 </div>
                 <div className='px-2 mx-auto'>

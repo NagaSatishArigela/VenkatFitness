@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className='md:flex items-center justify-between bg-primary py-4 md:px-10 px-7'>
                 {/* logo section */}
                 <div className='cursor-pointer flex'>
-                    <Link to='/'><img src={logo} alt='Venket Fitness' className='h-24' /></Link>
+                    <Link to='/'><img src={logo} alt='Venket Fitness' className='h-24' loading='lazy'/></Link>
                 </div>
                 {/* Menu icon */}
                 <div onClick={() => setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>

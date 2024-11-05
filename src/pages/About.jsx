@@ -38,7 +38,7 @@ const About = () => {
                 <div className="mx-auto text-center">
                     {/* Banner Section */}
                     <div className="mb-12">
-                        <img src={bannerImage} alt="Banner" className="w-full h-auto" />
+                        <img src={bannerImage} alt="Banner" className="w-full h-auto" loading='lazy'/>
                     </div>
                     {/* Text about Trainer */}
                     <div className="container mx-auto">

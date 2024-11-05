@@ -106,7 +106,7 @@ Online Workout Programs, Best online fitness training, Online fitness training f
                 <Grid container spacing={3} className="first-section">
                     <Grid item xs={12} md={6}>
                         <div className="image-container relative px-8">
-                            <img src={training} alt="Background" className="w-full" />
+                            <img src={training} alt="Background" className="w-full" loading='lazy'/>
                         </div>
                     </Grid>
                     <Grid item xs={12} md={6} style={{ display: 'flex', alignItems: 'center' }}>
@@ -349,28 +349,28 @@ Online Workout Programs, Best online fitness training, Online fitness training f
                 <Grid container spacing={3} className="third-section mt-8 lg:px-16 px-4">
                     <Grid item xs={12} sm={6} md={3}>
                         <Box className="card p-4 bg-Teal shadow-md" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>
-                            <img src={weight} alt='weight' className='h-24 m-auto ' />
+                            <img src={weight} alt='weight' className='h-24 m-auto ' loading='lazy'/>
                             <Typography variant="h5" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '500' }}>Tailored Online Fitness Training</Typography>
                             <Typography variant="p" className='flex text-justify font-medium py-4 font-Poppins'>Our online fitness training programs are designed to target weight loss specifically. You won't find a one-size-fits-all approach here. We customize every workout to your unique needs and goals.</Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <Box className="card p-4 bg-Teal shadow-md" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>
-                            <img src={weight} alt='weight' className='h-24 m-auto ' />
+                            <img src={weight} alt='weight' className='h-24 m-auto ' loading='lazy'/>
                             <Typography variant="h5" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '500' }}>The Best Online Fitness Training</Typography>
                             <Typography variant="p" className='flex text-justify font-medium py-4 font-Poppins'>When it comes to online fitness training, we take pride in being the best. Our experienced trainers are dedicated to your success and will guide you every step of the way.</Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <Box className="card p-4 bg-Teal shadow-md" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>
-                            <img src={weight} alt='weight' className='h-24 m-auto ' />
+                            <img src={weight} alt='weight' className='h-24 m-auto ' loading='lazy'/>
                             <Typography variant="h5" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '500' }}>Best 1# Online Fitness Trainer In India</Typography>
                             <Typography variant="p" className='flex text-justify font-medium py-4 font-Poppins'>If weight loss is your primary goal, our online personal trainers specialize in creating effective weight loss plans tailored to your body and lifestyle.</Typography>
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <Box className="card p-4 bg-Teal shadow-md" style={{ boxShadow: '0px 0px 10px 0px #04879C', marginBottom: '8px' }}>
-                            <img src={weight} alt='weight' className='h-24 m-auto ' />
+                            <img src={weight} alt='weight' className='h-24 m-auto ' loading='lazy'/>
                             <Typography variant="h5" className='text-center font-bold py-2 font-Poppins' style={{ fontWeight: '500' }}>Online Personal Trainer For Weight Loss</Typography>
                             <Typography variant="p" className='flex text-justify font-medium py-4 font-Poppins'>Our reputation speaks for itself. We're consistently ranked as one of the best online fitness trainers, our proven track record of helping clients achieve their weight loss goals.</Typography>
                         </Box>

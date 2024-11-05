@@ -78,6 +78,7 @@ console.log(filteredBlogs, 'fil')
                   className="blog-cover"
                   src={blog.bannerImage?.url}
                   alt="Blog Cover"
+                  loading="lazy"
                 />
                 <div className="blog-content">
                   <h3 className="blog-title">{blog.title}</h3>
