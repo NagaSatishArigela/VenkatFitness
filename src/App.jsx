@@ -12,7 +12,11 @@ import ContactUs from "./pages/ContactUs";
 import Training from "./pages/Training";
 import ThankYou from "./components/ThankYou";
 import Blogs from "./pages/Blogs";
-import { QUERY_SLUG_CATEGORIES, QUERY_SLUG_POSTS, grahcms } from "./utils/Queries";
+import {
+  QUERY_SLUG_CATEGORIES,
+  QUERY_SLUG_POSTS,
+  grahcms,
+} from "./utils/Queries";
 import BlogContent from "./pages/BlogContent";
 import CategoryBlogs from "./pages/CategoryBlogs";
 import { Helmet } from "react-helmet";
@@ -60,7 +64,10 @@ function App() {
       <div>
         <Navbar />
         <Helmet>
-          <title>Venkat Fitness Trainer - #1 Best Fitness Trainer in Hyderabad - India</title>
+          <title>
+            Venkat Fitness Trainer - #1 Best Fitness Trainer in Hyderabad -
+            India
+          </title>
           <meta
             name="title"
             content="Venkat Fitness Trainer - Best Fitness Trainer in Hyderabad - India"
@@ -102,15 +109,14 @@ function App() {
             }
           />
           <Route path="/blog/:slug" element={<Navigate to="/:slug" />} />
-          <Route
-            path="/:slug"
-            element={<BlogContent />}
-          />
+          <Route path="/:slug" element={<BlogContent />} />
           <Route
             path="/blog/category/:name"
             element={<CategoryBlogs posts={posts} categories={categories} />}
           />
           <Route path="/thank-you" element={<ThankYou />} />
+          {/* Fallback route to redirect all 404 pages to Home */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
       </div>
