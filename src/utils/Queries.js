@@ -75,3 +75,14 @@ export const QUERY_PRODUCTS = gql`
     }
   }
 `;
+
+export const QUERY_TRANSFORMATIONS = gql`
+  {
+    transformations {
+      transformations {
+        url
+        id
+      }
+    }
+  }
+`;
