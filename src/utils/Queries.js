@@ -79,10 +79,18 @@ export const QUERY_PRODUCTS = gql`
 export const QUERY_TRANSFORMATIONS = gql`
   {
     transformations {
-      transformations {
-        url
-        id
+      transformationUrl
+    }
+  }
+`;
+
+export const QUERY_ACCORDION = gql`
+  {
+    accordions {
+      content {
+        html
       }
+      title
     }
   }
 `;

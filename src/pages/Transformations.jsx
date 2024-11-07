@@ -14,7 +14,7 @@ const Transformations = () => {
     const fetchTransformations = async () => {
       try {
         const data = await grahcms.request(QUERY_TRANSFORMATIONS);
-        const transformations = data?.transformations[0]?.transformations || []; // Access nested transformations array
+        const transformations = data?.transformations[0]?.transformationUrl || []; // Access nested transformations array
         console.log(transformations, 'trabssb')
         setDynamicImages(transformations);
       } catch (error) {
@@ -91,7 +91,7 @@ const Transformations = () => {
               ))}
 
               {/* Remaining rows with dynamic images */}
-              {dynamicImages?.map((item, index) => (
+              {dynamicImages[0]?.images?.map((item, index) => (
                 <PhotoView
                   key={index + Images.length}
                   src={item.url}
@@ -100,7 +100,7 @@ const Transformations = () => {
                 >
                   <img
                     src={item.url}
-                    alt={`Transformation ${index + Images.length}`}
+                    alt={item.altText}
                     style={{ height: "500px", width: "350px", padding: "8px" }}
                     loading="lazy"
                   />
