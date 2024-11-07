@@ -199,3 +199,27 @@ export const Images = [
   onlinePersonal14,
   onlinePersonal15
 ];
+
+// constants.js
+export const accordionData = {
+  title: "MuscleBlaze - Leading Bodybuilding & Sports Nutrition Supplement Brand",
+  content: `
+Are you training hard in the gym to achieve those body goals that you have been dreaming of for long? 
+Well, you need the right nutrition. When your body has the fuel that it requires, only then will it be 
+able to develop from the inside out to give you the desired and long-lasting results.
+
+## MuscleBlaze - An Indian Brand You Can Trust
+
+When it comes to the world of nutrition and fitness, one name that you cannot ignore is MuscleBlaze. 
+Established in 2012, MuscleBlaze is an Indian Brand that deals in sports nutrition supplements. MuscleBlaze 
+offers quality nutritional supplements like whey protein, BCAA, mass gainer, weight gainer, fish oil, 
+multivitamins, fat burners, etc., at affordable prices.
+
+## Categories We Offer
+
+No matter what product you need to sustain your training, you can be sure to find it under the MuscleBlaze 
+Supplement range. The dedication to innovation gives you several ranges of products under each category that 
+you can choose based on your training goals and nutritional needs.
+  `
+};
+
