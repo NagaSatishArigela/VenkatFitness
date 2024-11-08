@@ -74,7 +74,7 @@ const Transformations = () => {
           <PhotoProvider>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
               {/* First two rows of static images */}
-              {Images.slice(0, 8).map((item, index) => (
+              {Images.slice(0, 13).map((item, index) => (
                 <PhotoView
                   key={index}
                   src={item}

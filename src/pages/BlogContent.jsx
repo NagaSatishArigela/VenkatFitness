@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
       <img
         src={product.productImage?.url}
         alt={product.title}
-        className="w-full h-56 object-fill"
+        className="w-full h-64 object-cover"
         loading="lazy"
       />
       <div className="p-4 text-center">

@@ -14,6 +14,11 @@ import sunil1 from "../assets/sunil1.webp";
 import sunil2 from "../assets/sunil2.webp";
 import prince from "../assets/prince.webp";
 import fitness1 from "../assets/fitness1.webp";
+import newFitn1 from "../assets/Best-Celebrity-Fitness-Trainer.jpg";
+import newFitn2 from "../assets/Celebrity-fitness-coach.jpg";
+import newFitn3 from "../assets/Celebrity-fitness-trainer-in-Hyderabad.png";
+import newFitn4 from "../assets/Celebrity-Personal-Trainer.webp";
+import newFitn5 from "../assets/Celebrity-Personal-Trainer-in-Hyderabad.jpg";
 import fitness2 from "../assets/fitness2.webp";
 import fitness3 from "../assets/fitness3.webp";
 import fitness4 from "../assets/fitness4.webp";
@@ -177,6 +182,11 @@ export const Images = [
   sunil2,
   prince,
   fitness1,
+  newFitn1,
+  newFitn2,
+  newFitn3,
+  newFitn4,
+  newFitn5,
   fitness2,
   fitness3,
   fitness4,
