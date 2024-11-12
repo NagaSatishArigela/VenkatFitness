@@ -84,7 +84,7 @@ const Transformations = () => {
                   <img
                     src={item}
                     alt=""
-                    style={{ height: "500px", width: "350px", padding: "8px" }}
+                    style={{ height: "500px", width: "350px", padding: "8px", objectFit: "fill" }}
                     loading="lazy"
                   />
                 </PhotoView>
@@ -101,7 +101,7 @@ const Transformations = () => {
                   <img
                     src={item.url}
                     alt={item.altText}
-                    style={{ height: "500px", width: "350px", padding: "8px" }}
+                    style={{ height: "500px", width: "350px", padding: "8px", objectFit: "fill" }}
                     loading="lazy"
                   />
                 </PhotoView>
