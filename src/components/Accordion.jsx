@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { grahcms, QUERY_ACCORDION } from "../utils/Queries";
 
-const SingleAccordion = () => {
+const SingleAccordion = ({page}) => {
   const [openIndex, setOpenIndex] = useState(null); // Track which accordion is open
   const [accData, setAccData] = useState([]);
 
@@ -12,7 +12,7 @@ const SingleAccordion = () => {
   useEffect(() => {
     const fetchAccordion = async () => {
       try {
-        const data = await grahcms.request(QUERY_ACCORDION);
+        const data = await grahcms.request(QUERY_ACCORDION, { page });
         setAccData(data?.accordions || []); // Ensure accData is an array
       } catch (error) {
         console.error("Error fetching accordion data:", error);

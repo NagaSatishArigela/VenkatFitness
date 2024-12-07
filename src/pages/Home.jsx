@@ -250,7 +250,7 @@ const Home = () => {
             </Slider>
           </div>
         </div>
-        <SingleAccordion/>
+        <SingleAccordion page="Home"/>
         <div className="bg-Teal flex flex-col md:flex-row justify-center items-center mt-20 border-b-2">
           <div className="lg:py-[50px] py-[10px] m-auto">
             <Typography

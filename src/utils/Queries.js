@@ -85,8 +85,8 @@ export const QUERY_TRANSFORMATIONS = gql`
 `;
 
 export const QUERY_ACCORDION = gql`
-  {
-    accordions {
+  query GetAccordionByPage($page: String!) {
+    accordions(where: { page: $page }) {
       content {
         html
       }
