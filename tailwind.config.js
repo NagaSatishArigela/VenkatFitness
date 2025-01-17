@@ -15,6 +15,15 @@ export default {
         Teal: "#04879C",
         gray: "#4B4B4C"
       },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        }
+      },
+      animation: {
+        scroll: 'scroll 40s linear infinite',
+      }
     },
   },
   plugins: [],

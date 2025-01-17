@@ -242,11 +242,34 @@ Online Workout Programs, Best online fitness training, Online fitness training f
         {/* Third Section */}
         <Typography
           variant="h4"
-          className="text-center font-Poppins py-8"
+          className="text-center font-Poppins py-4"
           style={{ fontSize: "42px", fontWeight: "700" }}
         >
           MEMBERSHIP PACKAGES
         </Typography>
+        <div className="scrolling-text bg-Teal mb-8">
+  <p className="block">
+  <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+          <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
+  </p>
+</div>
+
         <Grid
           container
           spacing={3}
@@ -514,9 +537,6 @@ Online Workout Programs, Best online fitness training, Online fitness training f
             </Box>
           </Grid>
         </Grid>
-        <div className="scrolling-text">
-          <p>🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</p>
-        </div>
         <Typography
           variant="h4"
           className="text-center font-Poppins py-8"
