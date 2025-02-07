@@ -22,12 +22,13 @@ app.post("/generateToken", (req, res) => {
     // Then generate JWT Token
 
     let jwtSecretKey = process.env.JWT_SECRET;
-    let data = {
-        time: Date(),
-        userId: 12,
-    }
+    const payload = {
+        username: 'venkatfitness',
+        role: 'admin',
+        org: 'venkatfitness-org'
+      };
 
-    const token = jwt.sign(data, jwtSecretKey);
+    const token = jwt.sign(payload, jwtSecretKey);
 
     res.send(token);
 });

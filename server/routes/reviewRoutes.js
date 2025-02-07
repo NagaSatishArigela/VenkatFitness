@@ -5,7 +5,9 @@ const authenticateToken = require('../middlewares/aurhMiddleware');
 const upload = require('../middlewares/uploadMiddleware');
 
 // POST endpoint with file upload middleware
-router.post('/reviews', authenticateToken, upload.single('file'), reviewController.createReview);
+router.post('/reviews', authenticateToken, upload.array('files', 10), reviewController.createReview);
 router.get('/reviews', authenticateToken, reviewController.getReviews);
+// Route for fetching review statistics
+router.get('/reviews/stats', authenticateToken, reviewController.getReviewStats);
 
 module.exports = router;
