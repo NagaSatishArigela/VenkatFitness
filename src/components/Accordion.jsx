@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { grahcms, QUERY_ACCORDION } from "../utils/Queries";
 
 const SingleAccordion = ({page}) => {
