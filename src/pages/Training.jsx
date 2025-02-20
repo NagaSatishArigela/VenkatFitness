@@ -247,7 +247,7 @@ Online Workout Programs, Best online fitness training, Online fitness training f
         >
           MEMBERSHIP PACKAGES
         </Typography>
-        <div className="scrolling-text bg-Teal mb-8">
+        {/* <div className="scrolling-text bg-Teal mb-8">
   <p className="block">
   <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
           <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
@@ -268,7 +268,7 @@ Online Workout Programs, Best online fitness training, Online fitness training f
           <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
           <span className="mx-4">🎯 New Year, New Goals! Save 10% on 3/6 Month Plans! 🎯</span>
   </p>
-</div>
+</div> */}
 
         <Grid
           container
